@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/rangeslider.css" media="screen" />
+</head>
+<body>
+    <!--<div id="testDiv" class="divWithBackground">-->
+        <!--<canvas id ="testCanvas" width="640" height="400">-->
+        <!--</canvas>-->
+    <!--</div>-->
+    <div id="mainDiv" class="divWithBackground">
+    </div>
+
+    <div id="rangeDiv" class="divRange">
+        <input id="rangeId" type="range" min="0" max="162" step="1" value="0">
+    </div>
+    <div id="timeDiv" class="divTime">
+    </div>
+    <div id="animateButtonDiv" class="divAnimate">
+        <input id="startAnimation" type="button" value="Run!" onclick="animationStart()"/>
+        <input id="stopAnimation" type="button" value="Stop!" onclick="animationStop()"/>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/rangeslider.min.js"></script>
+    <script type="text/javascript" src="js/heatmap.js"></script>
+    <script type="text/javascript" src="js/dataSource.js"></script>
+    <script type="text/javascript" src="js/rooms.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            createMainHeatmap();
+            setupRangeInput();
+//            drawDebugPeopleOnCanvas();
+//            var testHeatmap = createHeatmap("testDiv");
+//            drawHeatmapOfPeople(testHeatmap);
+        }
+    </script>
+
+</body>
+</html>

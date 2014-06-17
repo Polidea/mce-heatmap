@@ -8,6 +8,19 @@
     margin-right: auto;
 }
 
+.descriptionWrapper {
+    width:500px;
+    height: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singleDescription {
+    width: 33%;
+    height: 100%;
+}
+
 .divRange {
     width:500px;
     text-align: center;

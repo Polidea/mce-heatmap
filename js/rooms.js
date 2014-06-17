@@ -1,88 +1,45 @@
-
-var roomNames = ['hall','room-1','room-2','room-3']
-
 var heatmaps = [];
 var currentHeatmapIndex = 0;
 
 var lastValue = -1;
 var animationRunning = false;
 
-var MARGIN_WIDTH = 10;
-var MARGIN_HEIGHT = 10;
-var rooms = {
-    'hall': {
-        x:74,
-        y:278,
-        width: 492,
-        height: 76
-    },
-    'room-1': {
-        x: 74,
-        y: 22,
-        width: 152,
-        height: 246
-    },
-    'room-2': {
-        x: 242,
-        y: 22,
-        width: 152,
-        height: 246
-    },
-    'room-3': {
-        x: 415,
-        y: 22,
-        width: 152,
-        height: 246
+var ANIMATION_DELAY = 100;
 
+var MAX_VALUE = 2;
+
+function findInSchedule(roomName, time) {
+    var roomSchedule = schedule[roomName]
+    for (var i=0; i<roomSchedule.length; i++) {
+        var timeBlock = roomSchedule[i];
+        if (time >= timeBlock.start && time < timeBlock.end) {
+            return timeBlock.identifier
+        }
+    }
+    return ''
+}
+
+function fillDescriptions(time) {
+    for(var i=0; i<roomNames.length; i++) {
+        var roomName = roomNames[i];
+        var description = findInSchedule(roomName, time);
+        $('#' + roomName).html(description)
     }
 }
 
-var peopleSnapshot = {};
+function prefill_max_value(){
+    for (var i=0; i<dataSource.length;i++){
+        snapshots[i].data_source.max = MAX_VALUE;
+    }
+}
+
+
 
 function alternateHeatmap(heatmap) {
     if (heatmap == 0) {
         return 1;
     } else {
         return 0;
-    }
-}
-
-function fillRoomWithPeople(roomName, noOfPeople) {
-    var peopleList = [];
-    peopleSnapshot[roomName] = peopleList;
-    var room = rooms[roomName];
-    for (var i = 0; i<noOfPeople; i++) {
-        var randomXOffset = Math.floor(Math.random() * (room.width - 2 * MARGIN_WIDTH));
-        var randomYOffset = Math.floor(Math.random() * (room.height - 2 * MARGIN_HEIGHT));
-        var person = {
-            x : room.x + randomXOffset + MARGIN_WIDTH,
-            y : room.y + randomYOffset + MARGIN_HEIGHT
-        };
-        peopleList.push(person);
-    }
-}
-
-function fillData(measurementIndex) {
-    var oneMeasurement = dataSource[measurementIndex];
-    for (var i=0; i<roomNames.length; i++) {
-        fillRoomWithPeople(roomNames[i], oneMeasurement[roomNames[i]]);
-    }
-    $('#timeDiv').html(oneMeasurement.time)
-}
-
-function drawDebugPeopleOnCanvas() {
-    var canvas = document.getElementById('testCanvas');
-    if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        ctx.fillStyle = 'red';
-        ctx.strokeStyle = 'red';
-        ctx.globalAlpha = 0.8;
-        for (var i=0; i<roomNames.length; i++) {
-            var people = peopleSnapshot[roomNames[i]]
-            for (var j=0;j<people.length;j++) {
-                ctx.fillRect(people[j].x-2, people[j].y-2, 4,4);
-            }
-        }
     }
 }
 
@@ -99,13 +56,10 @@ function createHeatmap(elementId) {
     return heatmapFactory.create(config);
 }
 
-function drawHeatmapOfPeople(heatmap) {
-    for (var i=0; i<roomNames.length; i++) {
-        var people = peopleSnapshot[roomNames[i]]
-        for (var j=0;j<people.length;j++) {
-            heatmap.store.addDataPoint(people[j].x,people[j].y);
-        }
-    }
+function drawHeatmapOfPeople(index, heatmap) {
+    heatmap.clear();
+    heatmap.store.setDataSet(snapshots[index]['data_source'])
+
 }
 
 function setupRangeInput () {
@@ -118,8 +72,7 @@ function setupRangeInput () {
         onInit: function() {},
         onSlide: function(position, value) {
             if (lastValue != value) {
-                fillData(value);
-                swapHeatmaps();
+                swapHeatmaps(value);
                 lastValue = value;
             }
         },
@@ -128,9 +81,10 @@ function setupRangeInput () {
     $('#rangeDiv').css('visibility','visible');
 }
 
-function updateHeatmap(heatmap) {
-    heatmap.clear();
-    drawHeatmapOfPeople(heatmap);
+function updateHeatmap(index, heatmap) {
+    drawHeatmapOfPeople(index, heatmap);
+    $('#timeDiv').html(snapshots[index].time)
+    fillDescriptions(snapshots[index].time)
 }
 
 function setRangeValue(value) {
@@ -144,25 +98,26 @@ function createMainHeatmap() {
 }
 
 
-function swapHeatmaps() {
+function swapHeatmaps(index) {
     var alternateHeatmapIndex = alternateHeatmap(currentHeatmapIndex);
-    updateHeatmap(heatmaps[alternateHeatmapIndex]);
+    updateHeatmap(index,heatmaps[alternateHeatmapIndex]);
     var oldHeatmap = heatmaps[currentHeatmapIndex].get("canvas");
     var newHeatmap = heatmaps[alternateHeatmapIndex].get("canvas");
     currentHeatmapIndex = alternateHeatmapIndex;
-    $(oldHeatmap).fadeOut(400, function () {});
-    $(newHeatmap).fadeIn(400, function() {
+    $(oldHeatmap).stop(true, true);
+    $(newHeatmap).stop(true, true);
+    $(oldHeatmap).fadeOut(ANIMATION_DELAY, function () {});
+    $(newHeatmap).fadeIn(ANIMATION_DELAY, function() {
         if (animationRunning) {
             animate()
         }
     });
 }
 
-
 function animationStart() {
     if (!animationRunning) {
         animationRunning = true;
-        setTimeout(animate,200);
+        animate();
     }
 }
 
@@ -178,6 +133,9 @@ function animate() {
     if (val < 163) {
         setRangeValue(val);
     } else {
-        animationRunning = false
+        animationStop()
     }
 }
+
+
+prefill_max_value();

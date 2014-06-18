@@ -9,7 +9,7 @@ var schedule = {
         {start: "16:00:00", end:"16:45:00", identifier: "gal-cerf"},
         {start: "17:00:00", end:"17:45:00", identifier: "cesare-rocchi"},
         {start: "18:00:00", end:"18:45:00", identifier: "michele-capra"},
-        {start: "19:30:00", end:"22:00:00", identifier: "mortal-kombat"}
+        {start: "19:30:00", end:"22:35:00", identifier: "mortal-kombat"}
     ],
     "room-2": [
         {start: "10:00:00", end:"10:45:00", identifier: "mike-lee"},
@@ -43,7 +43,7 @@ var schedule = {
         {start: "16:00:00", end:"16:45:00", identifier: "peter-steinberger"},
         {start: "17:00:00", end:"17:45:00", identifier: "john-ellenich"},
         {start: "18:00:00", end:"18:45:00", identifier: "remy-virin"},
-        {start: "19:30:00", end:"22:00:00", identifier: "fifa"}
+        {start: "19:30:00", end:"22:35:00", identifier: "fifa"}
     ],
     "hall" : [
         {
@@ -58,7 +58,7 @@ var schedule = {
         },
         {
             start: "19:10:00",
-            end: "22:30:00",
+            end: "22:35:00",
             identifier: "afterparty"
         }
     ]

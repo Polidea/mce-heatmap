@@ -54,8 +54,8 @@ room_names = ['hall', 'room-1', 'room-2', 'room-3']
 
 rooms = {
     'hall': {
-        "x" : 74,
-        "y" : 278,
+        "x": 74,
+        "y": 288,
         "width": 492,
         "height": 76
     },

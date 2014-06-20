@@ -26,6 +26,9 @@
     </div>
     <div id="timeDiv" class="divTime">
     </div>
+    <div id="loadingDiv" class="divLoading">
+        Loading...
+    </div>
     <div id="animateButtonDiv" class="divAnimate">
         <input id="startAnimation" type="button" value="Run!" onclick="animationStart()"/>
         <input id="stopAnimation" type="button" value="Stop!" onclick="animationStop()"/>
@@ -49,6 +52,7 @@
                 prefill_max_value();
                 createMainHeatmap();
                 setupRangeInput();
+                enableAnimatedButtons();
             });
         }
     </script>

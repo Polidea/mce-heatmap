@@ -34,7 +34,17 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    visibility: hidden;
 }
+
+.divLoading {
+    width:500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: visible;
+}
+
 
 .divTime {
     margin-top: 40px;

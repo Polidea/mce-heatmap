@@ -106,6 +106,10 @@ function createMainHeatmap() {
     heatmaps[1] = createHeatmap("mainDiv");
 }
 
+function enableAnimatedButtons() {
+    $('#loadingDiv').css('visibility', 'hidden')
+    $('#animateButtonDiv').css('visibility','visible')
+}
 
 function swapHeatmaps(index) {
     var alternateHeatmapIndex = alternateHeatmap(currentHeatmapIndex);

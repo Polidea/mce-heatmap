@@ -3,10 +3,19 @@ var currentHeatmapIndex = 0;
 
 var lastValue = -1;
 var animationRunning = false;
+var animation;
+var lastAnimationTime;
 
-var ANIMATION_DELAY = 100;
+var TOTAL_ANIMATION_LENGTH = 20;
+var NUMBER_OF_ENTRIES = 163 * 5;
 
+var single_step_time = TOTAL_ANIMATION_LENGTH * 1000.0 / NUMBER_OF_ENTRIES
 var MAX_VALUE = 2;
+
+var myRequestAnimationFrame =
+            window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var myCancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
 function findInSchedule(roomName, time) {
     var roomSchedule = schedule[roomName]
@@ -106,36 +115,39 @@ function swapHeatmaps(index) {
     currentHeatmapIndex = alternateHeatmapIndex;
     $(oldHeatmap).stop(true, true);
     $(newHeatmap).stop(true, true);
-    $(oldHeatmap).fadeOut(ANIMATION_DELAY, function () {});
-    $(newHeatmap).fadeIn(ANIMATION_DELAY, function() {
-        if (animationRunning) {
-            animate()
-        }
-    });
+    $(oldHeatmap).hide();
+    $(newHeatmap).show();
 }
 
 function animationStart() {
     if (!animationRunning) {
         animationRunning = true;
-        animate();
+        animation = myRequestAnimationFrame(animate)
+        lastAnimationTime = Date.now()
     }
 }
 
 function animationStop() {
     if (animationRunning) {
         animationRunning = false;
+        myCancelAnimationFrame(animation)
     }
 }
 
 function animate() {
-    var val = parseInt($("#rangeId").val())
-    val += 1;
-    if (val < 163) {
+    newTime = Date.now();
+    time_passed = newTime - lastAnimationTime;
+    lastAnimationTime = newTime;
+    steps = time_passed / single_step_time;
+    var val = parseInt($("#rangeId").val());
+    val += steps;
+    if (val < NUMBER_OF_ENTRIES) {
         setRangeValue(val);
+        if (animationRunning) {
+            myRequestAnimationFrame(animate);
+        }
     } else {
+        setRangeValue(NUMBER_OF_ENTRIES)
         animationStop()
     }
 }
-
-
-prefill_max_value();

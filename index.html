@@ -22,7 +22,7 @@
     </div>
 
     <div id="rangeDiv" class="divRange">
-        <input id="rangeId" type="range" min="0" max="162" step="1" value="0">
+        <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
     </div>
     <div id="timeDiv" class="divTime">
     </div>
@@ -33,16 +33,23 @@
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/rangeslider.min.js"></script>
     <script type="text/javascript" src="js/heatmap.js"></script>
-    <script type="text/javascript" src="js/dataSource.js"></script>
     <script type="text/javascript" src="js/schedule.js"></script>
     <script type="text/javascript" src="js/rooms.js"></script>
     <script type="text/javascript">
+        var dataSource;
+        var snapshots;
         window.onload = function() {
-            createMainHeatmap();
-            setupRangeInput();
-//            drawDebugPeopleOnCanvas();
-//            var testHeatmap = createHeatmap("testDiv");
-//            drawHeatmapOfPeople(testHeatmap);
+            $.when($.getJSON("data/data_source.json").done(function(data) {
+                        dataSource = data;
+                    }),
+                    $.getJSON("data/snapshots.json").done(function(data) {
+                        snapshots = data;
+                    })
+            ).then(function() {
+                prefill_max_value();
+                createMainHeatmap();
+                setupRangeInput();
+            });
         }
     </script>
 

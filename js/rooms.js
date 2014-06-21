@@ -269,7 +269,9 @@ function animate() {
 function preloadSpriteImages() {
     for (key in movies) {
         if (movies[key].hasSprite) {
-            images.push(new Image().src = "snapshots/sprites/" + key + '.jpg');
+            var image = new Image();
+            image.src = "snapshots/sprites/" + key + '.jpg'
+            images.push(image);
         }
     }
 }

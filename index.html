@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/rangeslider.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/rangeslider.css" media="screen"/>
 </head>
 <body>
-    <!--<div id="testDiv" class="divWithBackground">-->
-        <!--<canvas id ="testCanvas" width="640" height="400">-->
-        <!--</canvas>-->
-    <!--</div>-->
-    <table class="descriptionWrapper">
-        <tr>
-            <td id="room-1" class="singleDescription"></td>
-            <td id="room-2" class="singleDescription"></td>
-            <td id="room-3" class="singleDescription"></td>
-        </tr>
-    </table>
-    <div id="mainDiv" class="divWithBackground">
-    </div>
-    <div id="hall" class="descriptionWrapper">
-    </div>
+<table class="movieWrapper">
+    <tr>
+        <td  class="singleMovie" valign="top">
+            <a href="" id="room-1-movie-href" target="_blank"><div id="room-1-movie" class="frame"></div></a>
+        </td>
+        <td class="singleMovie" valign="top">
+            <a href="" id="room-2-movie-href" target="_blank"><div id="room-2-movie" class="frame"></div></a>
+        </td>
+        <td class="singleMovie" valign="top">
+           <a href="" id="room-3-movie-href" target="_blank"> <div id="room-3-movie" class="frame"></div></a>
+        </td>
+    </tr>
+</table>
+<table class="descriptionWrapper">
+    <tr>
+        <td id="room-1" class="singleDescription" valign="top"></td>
+        <td id="room-2" class="singleDescription" valign="top"></td>
+        <td id="room-3" class="singleDescription" valign="top"></td>
+    </tr>
+</table>
+<div id="mainDiv" class="divWithBackground">
+</div>
+<div id="hall" class="bottomDescriptionWrapper">
+</div>
 
-    <div id="rangeDiv" class="divRange">
-        <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
-    </div>
-    <div id="timeDiv" class="divTime">
-    </div>
-    <div id="loadingDiv" class="divLoading">
-        Loading...
-    </div>
-    <div id="animateButtonDiv" class="divAnimate">
-        <input id="startAnimation" type="button" value="Run!" onclick="animationStart()"/>
-        <input id="stopAnimation" type="button" value="Stop!" onclick="animationStop()"/>
-    </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/rangeslider.min.js"></script>
-    <script type="text/javascript" src="js/heatmap.js"></script>
-    <script type="text/javascript" src="js/schedule.js"></script>
-    <script type="text/javascript" src="js/rooms.js"></script>
-    <script type="text/javascript">
-        var dataSource;
-        var snapshots;
-        window.onload = function() {
-            $.when($.getJSON("data/data_source.json").done(function(data) {
-                        dataSource = data;
-                    }),
-                    $.getJSON("data/snapshots.json").done(function(data) {
-                        snapshots = data;
-                    })
-            ).then(function() {
-                prefill_max_value();
-                createMainHeatmap();
-                setupRangeInput();
-                enableAnimatedButtons();
-            });
-        }
-    </script>
+<div id="rangeDiv" class="divRange">
+    <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
+</div>
+<div id="timeDiv" class="divTime">
+</div>
+<div id="loadingDiv" class="divLoading">
+    Loading...
+</div>
+<div id="animateButtonDiv" class="divAnimate">
+    <div id="controlDiv" width="56px" height="56px" onclick="toggleAnimation()" class="divControl"/>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/rangeslider.js"></script>
+<script type="text/javascript" src="js/heatmap.js"></script>
+<script type="text/javascript" src="js/rooms.js"></script>
+<script type="text/javascript">
+    var dataSource;
+    var snapshots;
+    var movies;
+    var schedule;
+    window.onload = function () {
+        $.when(
+                        $.getJSON("data/data_source.json").done(function (data) {
+                            dataSource = data;
+                        }),
+                        $.getJSON("data/snapshots.json").done(function (data) {
+                            snapshots = data;
+                        }),
+                        $.getJSON("data/movies.json").done(function (data) {
+                            movies = data;
+                        }),
+                        $.getJSON("data/schedule.json").done(function (data) {
+                            schedule = data;
+                        })
+                ).
+                then(function () {
+                    prepareAllData();
+                    enableAnimatedButtons();
+
+                });
+    }
+</script>
 
 </body>
 </html>

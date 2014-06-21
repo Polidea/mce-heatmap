@@ -1,0 +1,180 @@
+{
+    "room-1": [
+        {
+            "start": "10:00:00",
+            "end": "10:59:00",
+            "identifier": "eric-lafortune"
+        },
+        {
+            "start": "11:00:00",
+            "end": "11:59:00",
+            "identifier": "wiebe-elsinga"
+        },
+        {
+            "start": "12:00:00",
+            "end": "12:59:00",
+            "identifier": "alex-shirazi"
+        },
+        {
+            "start": "15:00:00",
+            "end": "15:59:00",
+            "identifier": "cheng-luo"
+        },
+        {
+            "start": "16:00:00",
+            "end": "16:59:00",
+            "identifier": "gal-cerf"
+        },
+        {
+            "start": "17:00:00",
+            "end": "17:59:00",
+            "identifier": "cesare-rocchi"
+        },
+        {
+            "start": "18:00:00",
+            "end": "18:59:00",
+            "identifier": "michele-capra"
+        },
+        {
+            "start": "19:30:00",
+            "end": "22:35:00",
+            "identifier": "mortal-kombat"
+        }
+    ],
+    "room-2": [
+        {
+            "start": "09:49:00",
+            "end": "09:59:00",
+            "identifier": "opening"
+        },
+        {
+            "start": "10:00:00",
+            "end": "10:59:00",
+            "identifier": "mike-lee"
+        },
+        {
+            "start": "11:00:00",
+            "end": "11:59:00",
+            "identifier": "jackson-gabbard"
+        },
+        {
+            "start": "12:00:00",
+            "end": "12:59:00",
+            "identifier": "kathryn-rotondo"
+        },
+        {
+            "start": "13:10:00",
+            "end": "13:27:00",
+            "identifier": "flash-1-matt-harasymczuk"
+        },
+        {
+            "start": "13:28:00",
+            "end": "13:45:00",
+            "identifier": "flash-2-lukasz-gawin"
+        },
+        {
+            "start": "13:46:00",
+            "end": "13:57:00",
+            "identifier": "flash-3-oguz-bastemur"
+        },
+        {
+            "start": "13:58:00",
+            "end": "14:11:00",
+            "identifier": "flash-4-piotr-podziemski"
+        },
+        {
+            "start": "14:12:00",
+            "end": "14:24:00",
+            "identifier": "flash-5-lukasz-stefaniszyn"
+        },
+        {
+            "start": "14:25:00",
+            "end": "14:42:00",
+            "identifier": "flash-6-krzysztof-zablocki"
+        },
+        {
+            "start": "15:00:00",
+            "end": "15:59:00",
+            "identifier": "drew-crawford"
+        },
+        {
+            "start": "16:00:00",
+            "end": "16:59:00",
+            "identifier": "damian-mehers"
+        },
+        {
+            "start": "17:00:00",
+            "end": "17:59:00",
+            "identifier": "rob-rusher"
+        },
+        {
+            "start": "18:00:00",
+            "end": "18:48:00",
+            "identifier": "dave-wiskus"
+        },
+        {
+            "start": "18:50:00",
+            "end": "19:01:00",
+            "identifier": "closing"
+        }
+    ],
+    "room-3": [
+        {
+            "start": "10:00:00",
+            "end": "10:59:00",
+            "identifier": "chris-eidhof"
+        },
+        {
+            "start": "11:00:00",
+            "end": "11:59:00",
+            "identifier": "orta-therox"
+        },
+        {
+            "start": "12:00:00",
+            "end": "12:59:00",
+            "identifier": "jon-reid"
+        },
+        {
+            "start": "15:00:00",
+            "end": "15:59:00",
+            "identifier": "tom-maes"
+        },
+        {
+            "start": "16:00:00",
+            "end": "16:59:00",
+            "identifier": "peter-steinberger"
+        },
+        {
+            "start": "17:00:00",
+            "end": "17:59:00",
+            "identifier": "john-ellenich"
+        },
+        {
+            "start": "18:00:00",
+            "end": "18:59:00",
+            "identifier": "remy-virin"
+        },
+        {
+            "start": "19:30:00",
+            "end": "22:35:00",
+            "identifier": "fifa"
+        }
+    ],
+    "hall": [
+        {
+            "start": "09:00:00",
+            "end": "10:00:00",
+            "identifier": "registration"
+        },
+        {
+            "start": "13:00:00",
+            "end": "15:00:00",
+            "identifier": "lunch"
+        },
+        {
+            "start": "19:10:00",
+            "end": "22:35:00",
+            "identifier": "afterparty"
+        }
+    ]
+}

@@ -4,7 +4,7 @@ import json
 import os
 import random
 
-from configuration import rooms, room_names, MARGIN_HEIGHT, MARGIN_WIDTH, IMAGE_HEIGHT, IMAGE_WIDTH
+from configuration import rooms, room_names, MARGIN_HEIGHT, MARGIN_WIDTH
 
 def get_list_element(source, index):
     if len(source) <= index:

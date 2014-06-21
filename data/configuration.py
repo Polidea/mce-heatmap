@@ -1,63 +1,81 @@
-IMAGE_WIDTH = 640
-IMAGE_HEIGHT = 400
+IMAGE_WIDTH = 800
+IMAGE_HEIGHT = 420
 
 FILL_COLOUR = (214, 214, 214)
+MARGIN_COLOUR = (150, 150, 150)
 
-MARGIN_WIDTH = 10
-MARGIN_HEIGHT = 10
+MARGIN_WIDTH = 15
+MARGIN_HEIGHT = 15
 
 room_names = ['hall', 'exit',
               'room-1', 'room-2', 'room-3',
               'room-1-exit', 'room-2-exit', 'room-3-exit',
               ]
 
+ROOM_WIDTH = 220
+ROOM_HEIGHT = 300
+TOP_EDGE = 5
+ROOM_SPACING = 10
+ROOM_EXIT_WIDTH = 60
+HALL_SPACING = 20
+HALL_HEIGHT = 90
+ROOM_EXIT_1_OFFSET = 16
+ROOM_EXIT_3_OFFSET = 16
+EXIT_OFFSET = 24
+EXIT_WIDTH = 20
+EXIT_HEIGHT = 40
+
+
+HALL_WIDTH = ROOM_WIDTH * 3 + ROOM_SPACING * 2
+LEFT_EDGE = (IMAGE_WIDTH - HALL_WIDTH) / 2
+
 rooms = {
     'hall': {
-        "x": 74,
-        "y": 288,
-        "width": 492,
-        "height": 76
+        "x": LEFT_EDGE,
+        "y": TOP_EDGE + ROOM_HEIGHT + HALL_SPACING,
+        "width": HALL_WIDTH,
+        "height": HALL_HEIGHT
     },
     'room-1': {
-        "x": 74,
-        "y": 22,
-        "width": 152,
-        "height": 246
+        "x": LEFT_EDGE,
+        "y": TOP_EDGE,
+        "width": ROOM_WIDTH,
+        "height": ROOM_HEIGHT
     },
     'room-1-exit': {
-        "x": 90,
-        "y": 268 - MARGIN_HEIGHT * 2,
-        "width": 40,
-        "height": 20 + MARGIN_HEIGHT * 4
+        "x": LEFT_EDGE + ROOM_EXIT_1_OFFSET,
+        "y": TOP_EDGE + ROOM_HEIGHT - MARGIN_HEIGHT * 2,
+        "width": ROOM_EXIT_WIDTH,
+        "height": HALL_SPACING + MARGIN_HEIGHT * 4
     },
     'room-2': {
-        "x": 242,
-        "y": 22,
-        "width": 152,
-        "height": 246
+        "x": LEFT_EDGE + ROOM_WIDTH + ROOM_SPACING,
+        "y": TOP_EDGE,
+        "width": ROOM_WIDTH,
+        "height": ROOM_HEIGHT
     },
     'room-2-exit': {
-        "x": 300,
-        "y": 268 - MARGIN_HEIGHT * 2,
-        "width": 40,
-        "height": 20 + MARGIN_HEIGHT * 4
+        "x": LEFT_EDGE + ROOM_WIDTH + ROOM_SPACING + ROOM_WIDTH / 2 - ROOM_EXIT_WIDTH / 2,
+        "y": TOP_EDGE + ROOM_HEIGHT - MARGIN_HEIGHT * 2,
+        "width": ROOM_EXIT_WIDTH,
+        "height": HALL_SPACING + MARGIN_HEIGHT * 4
     },
     'room-3': {
-        "x": 414,
-        "y": 22,
-        "width": 152,
-        "height": 246
+        "x": LEFT_EDGE + 2 * ROOM_WIDTH + 2 * ROOM_SPACING,
+        "y": TOP_EDGE,
+        "width": ROOM_WIDTH,
+        "height": ROOM_HEIGHT
     },
     'room-3-exit': {
-        "x": 514,
-        "y": 268 - MARGIN_HEIGHT * 2,
-        "width": 40,
-        "height": 20 + MARGIN_HEIGHT * 4
+        "x": LEFT_EDGE + 3 * ROOM_WIDTH + 2 * ROOM_SPACING - ROOM_EXIT_3_OFFSET - ROOM_EXIT_WIDTH,
+        "y": TOP_EDGE + ROOM_HEIGHT - MARGIN_HEIGHT * 2,
+        "width": ROOM_EXIT_WIDTH,
+        "height": HALL_SPACING + MARGIN_HEIGHT * 4
     },
     'exit': {
-        "x": 566 - MARGIN_WIDTH * 2,
-        "y": 312,
-        "width": 20 + MARGIN_WIDTH * 4,
-        "height": 40
+        "x": LEFT_EDGE + HALL_WIDTH - MARGIN_WIDTH * 2,
+        "y": TOP_EDGE + ROOM_HEIGHT + HALL_SPACING + EXIT_OFFSET,
+        "width": EXIT_WIDTH + MARGIN_WIDTH * 4,
+        "height": EXIT_HEIGHT
     }
 }

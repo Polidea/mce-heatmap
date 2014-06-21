@@ -1,0 +1,356 @@
+{
+    "eric-lafortune": {
+        "name": "Eric Lafortune",
+        "heading": "ProGuard's creator",
+        "twitter": "http://www.linkedin.com/in/ericlafortune",
+        "twitter-name": "Eric's LinkedIn",
+        "state": "Brussels - Belgium",
+        "recording": "PSpL2tShmAY",
+        "details": "At his start-up Saikoa, he puts all his energy in driving ProGuard and\nDexGuard forward, and helping customers build compact and hardened applications.\n",
+        "title": "ProGuard, Optimizer and Obfuscator in the Android SDK",
+        "presentation-details": "ProGuard is the open-source optimizer and obfuscator that is integrated in the Android SDK.\nIt reduces the size of applications, improves their performance, and makes them more difficult to\nreverse-engineer. So what can you expect for your applications? I'll present some\ntypical results, to convince you to give ProGuard a try. I'll then discuss the\nlatest developments and provide some background that should help you to get the best out of ProGuard.\n",
+        "hasSprite": true,
+        "spriteFrames": 51
+    },
+    "mike-lee": {
+        "name": "Mike Lee",
+        "heading": "Mayor of Appsterdam",
+        "twitter": "https://twitter.com/bmf",
+        "twitter-name": "@bmf",
+        "state": "Amsterdam - Netherlands",
+        "recording": "1qVNEB5Xc3s",
+        "details": "Before he was known as the Mayor of Appsterdam, legendary product engineer and world's toughest\nprogrammer Mike Lee worked on apps for Alaska Airlines,\nDelicious Monster, Tapulous, United Lemur, Apple, and Nextive,\nproducing such hits as Delicious Library, Tap Tap Revenge, Obama '08,\nand Apple's Mobile Store. After he established Amsterdam as the world capital of\napp development, Mike moved on to start the New Lemurs, an Appsterdam startup building\neducational games, with the coolest URL of all time: <a href=\"http://le.mu.rs\">http://le.mu.rs</a>.\n(Followed closely by the URL for his blog, <a href=\"http://mur.mu.rs\">http://mur.mu.rs</a>)\n<br>\n<br>\nWhen he's not working to change the world,\nhe spends quiet time at home in the 17th century canal house in Amsterdam where he\nlives with his partner Judy and their cats, Wiebel and Wobbel.\nMike enjoys racing cars, flying airplanes, and playing guitar,\nbut he's also content sitting beside the canal, sharing a single-cask whisky with friends.\n",
+        "title": "Keynote: The App Universe After the Big Bang",
+        "presentation-details": "There was a time when mobile computing and productized apps were magic fairy dust that sprinkled money\nall over a project. Those were good times. The big bang, the heady expansion, the flash of chaos as the past\ngave way to the future. But now that the future is the present, a\nnd the gold rush is over, where do we go from here?\n<br>\nWhat kind of ideas are worth pursuing? Are app-based startups a thing anymore? What kind of business\nplans make sense? Is there room for indie apps? How about indie games?\nCan we still make a living doing this? Can we still live the dream and be our own boss?\nCan we still be artists?\n<br>\nMike Lee has been there along the way, and will share his war stories\nand market analysis from having witnessed history being made. You won't want to miss it!\n",
+        "hasSprite": true,
+        "spriteFrames": 52
+    },
+    "peter-steinberger": {
+        "name": "Peter Steinberger",
+        "heading": "PSPDFKit creator",
+        "twitter": "https://twitter.com/steipete",
+        "twitter-name": "@steipete",
+        "state": "Vienna - Austria",
+        "recording": "frgnVhBcIFA",
+        "details": "Peter Steinberger is an Indie developer who’s in the rare business of working full-time on an iOS\nframework for the B2B market with high-profile customers like Dropbox or Evernote. If you’re working\non apps there’s a good chance that you’re using one of his many projects, like PSPDFKit,\nPSStackedView, PSTCollectionView or others.\n",
+        "title": "Practical Runtime Hackery",
+        "presentation-details": "Details of the talk coming soon.\n",
+        "hasSprite": true,
+        "spriteFrames": 49
+    },
+    "wiebe-elsinga": {
+        "name": "Wiebe Elsinga",
+        "heading": "EntrepreNerd",
+        "twitter": "https://twitter.com/welsinga",
+        "twitter-name": "@welsinga",
+        "state": "Utrecht - Netherlands",
+        "recording": "SdKCG3bE9QU",
+        "details": "Wiebe Elsinga is the co-founder/organizer of the GDG Dutch Android User Group and also a\nMobile Technical Lead at Itude Mobile, basically a EntrepreNerd.\nMainly focused on the development of mobile applications, and is\ncontinuously seeking quality improvements within the development process of mobile applications.\nAlso a public speaker at technical conferences worldwide.\n",
+        "title": "Prototyping your Android app, the (U)X-factor",
+        "presentation-details": "Prototypes can be a great way to improve Android application results on two fronts:\nthey can prove a concept or improve on it, and they can teach you valuable lessons\nabout the best ways to develop the product.\nThis session will provide practical information about the approach and\nexperiences implementing prototyping.\n",
+        "hasSprite": true,
+        "spriteFrames": 41
+    },
+    "jackson-gabbard": {
+        "name": "Jackson Gabbard",
+        "heading": "Mobile engineer at Facebook, bike rider, word nerd",
+        "twitter": "https://twitter.com/jackson_gabbard",
+        "twitter-name": "@jackson_gabbard",
+        "state": "London - UK",
+        "recording": "l5I90kiHb7Q",
+        "details": "In nearly four years at Facebook, Jackson has worked on infrastructure, user interface engineering,\nmobile JS infra, mobile Timeline, mobile App Center, data pipelines, and internal tools. Now a\nmember of the London engineering team, Jackson stays sharp building tools to help regional offices\nstay connected. He's a web guy at heart with a mobile phone in hand.\n",
+        "title": "Move Fast, Support Multiple Platforms",
+        "presentation-details": "Facebook has #1 application on all major mobile platforms. We run one of the most trafficked websites\nin the world. More than 1.1 billion people around the world use Facebook every month.\nAt our scale, redoing work across different platforms comes with very high costs.\nThe talk will focus on how Facebook leverages shared infrastructure across different consumer platforms.\nJoin us if you want to know how Facebook stays fast even as the internet takes on new sizes and shapes.\n",
+        "hasSprite": true,
+        "spriteFrames": 52
+    },
+    "orta-therox": {
+        "name": "Orta Therox",
+        "heading": "Makes apps. Writes things. Lots of things. Talks.",
+        "twitter": "https://twitter.com/orta",
+        "twitter-name": "@orta",
+        "state": "New York City, London - UK",
+        "recording": "xN5-nDZpuBU",
+        "details": "Orta is an iOS developer at Artsy, building beautiful portfolio apps for some of the biggest\nArt galleries in the world. In trying to figure out what is the best way to make the biggest\nimpact in the iOS ecosystem he opted to work on CocoaPods building tools like CocoaDocs,\nmaintaining the Specs repository, re-branding the project and doing community out-reach.\n",
+        "title": "CocoaPods and the road to 1.0",
+        "presentation-details": "The road to CocoaPods 1.0 has been a long and occasionally unstable path, but we’ve come out of the other\nside now and are on the final stretch with the aim of getting 1.0 out in 2014.\nOrta will be talking about how the CocoaPods team is tackling the big issues of design,\nusability, new features and backwards-compatability.\n",
+        "hasSprite": true,
+        "spriteFrames": 45
+    },
+    "alex-shirazi": {
+        "name": "Alex Shirazi",
+        "heading": "Founder of Phlint",
+        "twitter": "https://twitter.com/alexshirazi",
+        "twitter-name": "@alexshirazi",
+        "state": "San Francisco - California",
+        "recording": "5y4MWdKwKZ8",
+        "details": "Alex Shirazi is the founder of Phlint, a mobile development firm located in Silicon Valley.\nSince 2005 Phlint has been working with both small and large businesses in the technology and\nmobile space specializing in software for the retail environment. Phlint works with hardware\nmanufactures to create software for next generation mobile devices.\nPrior to moving to the Silicon Valley area, Alex studied advertising and\ndesign at the University of Illinois at Urbana-Champaign.\n",
+        "title": "Design Focused Mobile Development",
+        "presentation-details": "Modern software development practices have emphasized the importance of the developer-designer relationship.\nThe product management focus has shifted from technical functionalities to usability.\nAlex discusses the relationship between developers and designers as well as different management approaches.\n",
+        "hasSprite": true,
+        "spriteFrames": 43
+    },
+    "kathryn-rotondo": {
+        "name": "Kathryn Rotondo",
+        "heading": "Freelance interactive developer",
+        "twitter": "https://twitter.com/krotondo",
+        "twitter-name": "@krotondo",
+        "state": "Sttutgart - Germany",
+        "recording": "aAwysIXJq74",
+        "details": "Kathryn Rotondo is a freelance interactive developer for web and mobile.\nShe honed her craft both working on high-profile projects for Vogue and Target at a large\ndigital agency; and developing third party APIs at a small startup.\nShe has taught at RISD Continuing Education, co-wrote Adobe AIR in Action,\nand speaks internationally (PFCongres Netherlands, CodeMotion Germany, Flash on the Beach UK,\nMulti-Mania Belgium). Her numerous awards include recognition as an Adobe\nCommunity Professional, and most recently, first place in the\ninaugural Berlin Geekettes Hackathon for her iOS app Monkey See Monkey Do.\n<br>\n<br>\nA Huffington Post Girls in Stem mentor, Kathryn is passionate about encouraging\nwomen developers and curates <a href=\"http://equalitism.tumblr.com\">http://equalitism.tumblr.com</a>.\nShe can also be found at <a href=\"http://kathrynrotondo.com\">http://kathrynrotondo.com</a>\nand on twitter as <a href=\"https://twitter.com/krotondo\">@krotondo</a>.\n",
+        "title": "So Easy a Child Could Do It - Designing Apps for Little Fingers",
+        "presentation-details": "Young children can seem to “get” touch devices right away. But is designing apps\nfor young kids child's play? Not so fast. There are special considerations to make when\ndesigning for young kids, to maximize their engagement and minimize their frustration.\nWe'll discuss using characters, audio and visual indicators, and inactivity timeouts.\nWe'll also cover which gestures are intuitive for small fingers, how the way\nchildren hold tablets affects UI, and what content to include for parents\n(and for legal reasons) and how.\n",
+        "hasSprite": true,
+        "spriteFrames": 59
+    },
+    "jon-reid": {
+        "name": "Jon Reid",
+        "heading": "Test Driven iOS Developer",
+        "twitter": "https://twitter.com/qcoding",
+        "twitter-name": "@qcoding",
+        "state": "San Jose - California",
+        "recording": "Jzlz3Bx-NzM",
+        "details": "Jon Reid has been practicing Test Driven Development for 12 years,\nand has worked at eBay on their iOS apps for the past 3 years.\nIf you do the math, you'll figure out that Jon is a specimen of\nthat rare and elusive animal: an iOS developer who uses TDD.\n<br>\nWanting better tools, Jon developed OCHamcrest and PyHamcrest (Objective-C and Python libraries of\nmatchers for building test expressions, based on Hamcrest) and OCMockito (an Objective-C mocking\nframework based on Mockito). He is also the author of the blog Quality Coding\n(<a href=\"http://qualitycoding.org\">http://qualitycoding.org</a>).\n",
+        "title": "Test Driven Development for iOS (and anything)",
+        "presentation-details": "Test Driven Development seems like a good idea… for simple code that has no dependencies!\nBut iOS code depends on Foundation, UIKit… we're doing a lot of networking and UI… you may\nthink that TDD just doesn't work in such cases (eliminating most of your code).\nBut that's just not so! In this talk, Jon Reid will show you how to turn dependencies around so you can write\ncode that is testable. We'll look at tests, stubs and mocks, and an example of testing networking code.\n",
+        "hasSprite": true,
+        "spriteFrames": 60
+    },
+    "cheng-luo": {
+        "name": "Cheng Luo",
+        "heading": "Amazon Technical Evangelist",
+        "twitter": "https://twitter.com/chengluo",
+        "twitter-name": "@chengluo",
+        "state": "Luxembourg",
+        "recording": "-D0gtqSsrUw",
+        "details": "Before joined Amazon EU as the Developer Evangelist, Cheng Luo was the Head of Developer Relations in\nSamsung Europe. He spends most of his time travelling and speaking at various events and conferences\ncovers social and location services, HTML5, IAP and other topics.\nWhen not travelling, he enjoys prototyping applications for mobile devices and writing books.\nDuring his five years in Samsung, he co-authored two books: \"Introduction to Bada\" and \"Tizen for\nDummies\" published by Wiley.  Prior to joining Samsung’s Developer Relations team, he was a\nresearcher working on the Networking Protocol Design and Security projects funded by\nNokia Research Centre in Finland. He has over 8 years experience on designing and\ndeveloping mobile applications for various platforms, including Maemo, Symbian, Bada, Tizen and Android.\n",
+        "title": "Adding Knobs to your App - Modifying Behavior in the Wild (without Republishing)",
+        "presentation-details": "A/B testing is a powerful mechanism for performing user tests and fine-tuning features and content.\nIt has been well-known and popular with website developers for years, but it can also be profoundly\nuseful when creating mobile apps.  Treatments, tests, and user segments can be used to change your\napp’s behavior on the fly—for everyone, or only certain users—without having to resubmit it for\npublication or download new content.  This is possible across multiple app store marketplaces\nand device platforms simultaneously, and all from a centralized dashboard that combines fingertip\ncontrol and detailed reporting.  This session will demonstrate how to use Amazon’s A/B testing\nservice to add behavioral flexibility to your mobile app.\n",
+        "hasSprite": true,
+        "spriteFrames": 42
+    },
+    "drew-crawford": {
+        "name": "Drew Crawford",
+        "heading": "Freelancer at DrewCrawfordApps",
+        "twitter": "https://twitter.com/drewcrawford",
+        "twitter-name": "@drewcrawford",
+        "state": "Austin - Texas",
+        "recording": "h1TRkDSmnOc",
+        "details": "Drew is a software developer, writer, and consultant. He owns and operates DrewCrawfordApps, an\nAustin-based boutique development company with a focus on delivering challenging and innovative\niPhone, iPad, and server software and solutions for companies of all sizes. Drew's work has been\nfeatured in TechCrunch and Daring Fireball, and his writing and insight have been praised by\nnumerous industry luminaries.\n<br/>\n<br/>\nAuthor of the well known\n<a href=\"http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/\" target=\"_blank\">\n    \"Why Mobile Web Apps are Slow\"</a> article.\n",
+        "title": "UI testing sucks",
+        "presentation-details": "Have you ever thought about trying out UI testing tools on your application like UI Automator, KIF, or Frank?\nOr have you tried those tools, only to find yourself with failing builds, a massive time investment,\nand angry coworkers?\n<br/><br/>\nIn this talk, Drew will draw on his experience with automated UI testing in over a dozen real-world projects,\nfrom single-developer efforts to large teams, and show you why automated UI testing so often fails to meet\nexpectations. And critically, how to avoid those mistakes, bring sanity to your overall test suite,\nand ship better software.\n",
+        "hasSprite": true,
+        "spriteFrames": 54
+    },
+    "tom-maes": {
+        "name": "Tom Maes",
+        "heading": "Freelance iOS consultant",
+        "twitter": "https://twitter.com/tmaes",
+        "twitter-name": "@tmaes",
+        "state": "Stockholm - Sweden",
+        "recording": "Lc5sKxo0k9k",
+        "details": "Tom is a freelance iOS consultant who wasted his childhood on 8-bit computer games instead\nof playing outside. His background includes engineering complex web applications and\nleading technical teams for clients ranging from early dotcom startups to Fortune 500\nmultinationals. He admits to having produced a fair bit of write-only\nPerl code in the dark CGI-fuelled days of Web 1.0.\n<br>\n<br>\nHis interests are firmly at the intersection of liberal arts and technology,\ncombining a passion for anything Apple with a keen interest in typography and\nmid-century modern design and architecture.\nHe currently divides his time between his native Antwerp, Belgium and Stockholm, Sweden.\n",
+        "title": "First we take Manhattan ... getting your iOS apps ready for the world",
+        "presentation-details": "The iOS platform is in its next phase, where the main growth is no longer in the US, but in new\nemerging economies. Is your app ready to sell to those markets? We'll analyze the numbers pointing\nto an emerging new non-US centric app market and help you figure out if it makes financial sense\nfor you to internationalize your apps. Next, we'll build an overview of the many internationalization\nand localization tasks that await you on the road to global success\n",
+        "hasSprite": true,
+        "spriteFrames": 56
+    },
+    "michele-capra": {
+        "name": "Michele Capra",
+        "heading": "Freelance Windows Phone / RT Consultant",
+        "twitter": "https://twitter.com/piccoloaiutante",
+        "twitter-name": "@piccoloaiutante",
+        "state": "Brescia - Italy",
+        "recording": "Nwn7Oexb9lc",
+        "details": "Michele Capra is an Italian software consultant, international speaker and trainer on software development\nwith Microsoft technologies. After getting his master degree in Software Engineering and working as visiting\nresearcher at Trinity College of Dublin, he started working in the software industry and taking a part\nin a wide variety of software projects. He has been working for several financial institutions\nlike banks and funds as well as startups. In these projects he had the opportunity to learn and\npractice agile methodologies like Test Driven Development as well as to study Microsoft technologies l\nike WPF,Asp.Net MVC, Windows Phone and WinRT.\n",
+        "title": "Mind the Gap! From Android to Windows Phone.",
+        "presentation-details": "Android has gained a big market share in these days and right now  many companies have apps published in\nPlay Store, that's a fact. Recently Windows Phone has risen as a new player in the mobile market,\nespecially in the low-end market segment where Android is the only option, and that's another fact.\nSo now some companies are starting to asking themselves: what about porting my apps on Windows Phone 8?\nWhat does it involve? How far is Java from C#? Is Android Studio so different from Visual Studio for\nWindows Phone?<br>\nBased on my personal experience of porting a business application used by more than 40.000 workers\nacross Europe i'll show you my journey from Android to Windows Phone.\n",
+        "hasSprite": true,
+        "spriteFrames": 31
+    },
+    "damian-mehers": {
+        "name": "Damian Mehers",
+        "heading": "Senior Software Engineer at Evernote",
+        "twitter": "https://twitter.com/DamianMehers",
+        "twitter-name": "@DamianMehers",
+        "state": "Geneva - Switzerland",
+        "recording": "wl0LQ3UhTgU",
+        "details": "Damian is a Senior Software Engineer at Evernote, based out of Geneva, Switzerland.\nHe created the original Evernote Windows Phone client, and worked on\nEvernote Food for Android, and is now focused on Evernote and wearable technology.\n<br>\n<br>\nPrior to joining Evernote, Damian released an app he'd created in his spare time,\nwhich used Evernote's open API. Evernote noticed, and he got a call from the CEO asking\nif he'd join the company to help build Evernote's next generation of products.\nIt wasn't a hard decision.\n<br>\n<br>\nHe has founded and eventually sold several successful software product companies,\nand loves the magic that is programming: turning something imagined into something real.\n",
+        "title": "Evernote and Wearable devices - what have we done, what could we do?",
+        "presentation-details": "In this session Damian will share his experience creating Evernote apps for several wearable devices,\nincluding a deep dive into implementation details as well as higher level insights.\n<br>\nAlthough its possible to implement all kinds of features, what actually makes sense on these small devices?\nWhen would someone use a wearable device rather than their phone? Come to find out what Evernote has\nalready done on these devices, how they did it, and what might make sense in the future.\n",
+        "hasSprite": true,
+        "spriteFrames": 45
+    },
+    "chris-eidhof": {
+        "name": "Chris Eidhof",
+        "heading": "objc.io founder",
+        "twitter": "https://twitter.com/chriseidhof",
+        "twitter-name": "@chriseidhof",
+        "state": "Berlin - Germany",
+        "recording": "yXFflqGTZ3Q",
+        "details": "<a href=\"http://eidhof.nl\">Chris Eidhof</a> is an independent iOS developer from Berlin.\nHe's a freelancer, founded <a href=\"http://www.objc.io\">objc.io</a> and organizes\n<a href=\"http://www.uikonf.com\">UIKonf</a>.\n",
+        "title": "The evolution of an iOS programmer",
+        "presentation-details": "In this talk I'll tell you the things I learned since I started iOS programming (with the release of\niPhone SDK 2.0). We'll look at changes in the language and frameworks,\nbut also dive into best practices I learned the hard way, or by working with other programmers.\n",
+        "hasSprite": true,
+        "spriteFrames": 50
+    },
+    "john-ellenich": {
+        "name": "John Ellenich",
+        "heading": "Mobile UI Designer at Jive Software",
+        "twitter": "https://twitter.com/ellenich",
+        "twitter-name": "@ellenich",
+        "state": "San Francisco - California",
+        "recording": "pqSd2_kmA3w",
+        "details": "With almost a decade of designing touch user interfaces, John Ellenich has the experiences that\ndefine what we consider a Mobile UI Designer today.\n<br/><br/>\nDesigner of the Webby Award winning app FlightTrack, John’s designs have impacted millions of\npeople around the globe as it continues to be the best selling travel app on the App Store.\nAs the Creative Director at the mobile enterprise app company Taptera, he was heavily involved\nin the product ideation, creation and development of Taptera’s suite of off-the-shelf enterprise apps.\nNow at Jive Software, John is currently helping redefine mobile enterprise experiences\nfor Jive’s numerous Fortune 100 customers.\n",
+        "title": "Designing for the Enterprise",
+        "presentation-details": "Mobile apps are rapidly changing the experiences enterprise users expect. Enterprise app design is now being\ndriven by \"consumer grade\" app experiences. Come learn some of the design\nprocesses and tools for providing the mobile experiences you corporate users expect.\n",
+        "hasSprite": true,
+        "spriteFrames": 50
+    },
+    "rob-rusher": {
+        "name": "Rob Rusher",
+        "heading": "UX architect who builds interactive digital solutions.",
+        "twitter": "https://twitter.com/robrusher",
+        "twitter-name": "@robrusher",
+        "state": "Denver - Colorado",
+        "recording": "GVcGbpUuku0",
+        "details": "Rob Rusher is a nationally recognized leader in the realm of software user experience transformation and\ntechnology. In his role at <a href=\"http://www.on3software.com/\" target=\"_blank\">On3</a>, Rob creates\nmulti-screen application strategies for businesses around the globe.\nRob is a recognized innovator in development, community and education. He has taught and mentored the\ntechnical teams at Standard and Poor’s, eBay, IBM Global Services, Overstock,\nUS Government and Fortune 100 organizations.\n<br/><br/>\nBecause of his depth of knowledge and long standing industry relationship, Rob was selected to write programming\ntraining courses and their corresponding certification exams for multiple web and mobile development\ntechnologies. Rob has also co-authored four best-selling books on building secure, cutting-edge and\nrapidly developed applications. He is also very active is organizing and speaking at user experience,\napplication development and mobile conferences and user groups. In addition to growing his software\nconsulting practice, <a href=\"http://www.on3software.com/\" target=\"_blank\">On3</a>, Rob has been building\nexpertise in application design and software development\non a wider variety of devices and platforms that extend the applications to change the\nway we all create and live.\n",
+        "title": "Are You Staring at My GLASS?",
+        "presentation-details": "Google GLASS is the most interesting examples of wearable computing to date. Come experience what it is\nlike to use and develop applications for Google GLASS. This session will demonstrate the features and\nfunction of Google GLASS as well as introduce you to how to build Glassware.\nAnd \"Yes!\", you can even try it out.\n",
+        "hasSprite": true,
+        "spriteFrames": 58
+    },
+    "cesare-rocchi": {
+        "name": "Cesare Rocchi",
+        "heading": "Owner at Studio Magnolia",
+        "twitter": "https://twitter.com/_funkyboy",
+        "twitter-name": "@_funkyboy",
+        "state": "Forli Cesena - Italy",
+        "recording": "h9ntm8O3228",
+        "details": "UX designer and developer. Writer and speaker. Creator of <a href=\"http://breeziapp.com\">http://breeziapp.com</a>.\nBlogging at <a href=\"http://upbeat.it/\">http://upbeat.it/</a>  Now working on\n<a href=\"http://neater.co\">http://neater.co</a>\n",
+        "title": "Apps and Mental Models",
+        "presentation-details": "When devising an app we make oceans of decisions. Some are dictated by personal preferences, some by principles,\nsome by elaborating feedback on beta versions and some by taking inspiration from other apps. A posteriori,\ndepending on the \"success\" of the app we can say which decisions were right or wrong. An alternative approach\nis based on Mental Models, \"minimal pictures\" that can be used to describe how people learn and interact.\nBefore buying an app your customer has already a mental model of how it should work. Knowing more about that\nmodel helps you a lot to devise an experience that matches customers' expectations.\nIn this presentation Cesare will talk about beliefs, cars, processes, scripts, metaphors, roadblocks, cheating,\nwoods, tasks, plans, novels, walkthroughs, inertia, simplicity, affordance. He will raise a fuss,\nand when the dust settles, the distance between your next app and the mental model\nof your customers will, hopefully, be shorter..\n",
+        "hasSprite": true,
+        "spriteFrames": 48
+    },
+    "gal-cerf": {
+        "name": "Gal Cerf",
+        "heading": "VP of Engineering at uTest",
+        "twitter": "http://il.linkedin.com/pub/gal-cerf/4/2a5/924/",
+        "twitter-name": "Gal's LinkedIn",
+        "state": "Boston - Massachusets",
+        "recording": "7LdH4rAI1Rc",
+        "details": "As the VP of Engineering at uTest, Gal oversees the company’s far reaching engineering department\nwith direct reports located in the US and Poland. He is responsible for engineering efforts related to\nuTest’s platform, testing tools and general tech direction. Gal has extensive experience in development\nmanagement in both start-ups and large companies. Prior to joining uTest, Gal served as the VP of R&D for Pops\nin Tel Aviv and held several other development management positions.\nGal received an MBA from the Israel Institute of Technology.\n",
+        "title": "Mobile App Quality",
+        "presentation-details": "Description - My journey from server side quality to Android app quality - what defines mobile quality, how is\nit different from other software, and why is it so much more important.\nHow do I measure quality, pre and post production quality - the 360 degrees\nquality view, automation, tools and methodologies.\n",
+        "hasSprite": true,
+        "spriteFrames": 35
+    },
+    "dave-wiskus": {
+        "name": "Dave Wiskus",
+        "heading": "Interaction designer",
+        "twitter": "https://twitter.com/dwiskus",
+        "twitter-name": "@dwiskus",
+        "state": "Denver - Colorado",
+        "recording": "vbWroSInKHU",
+        "details": "Dave Wiskus is an interaction designer (<a href=\"http://vesperapp.co\">http://vesperapp.co</a>) and podcaster\n(<a href=\"http://unprofesh.com\">http://unprofesh.com</a>) with an adorable puppy.\n",
+        "title": "Human interaction",
+        "presentation-details": "Dave likes to keep the details of his talks a bit mysterious - this talk's subject is mainly about \"how to think\nabout design in the context of what you do every day\"\n",
+        "hasSprite": true,
+        "spriteFrames": 47
+    },
+    "remy-virin": {
+        "name": "Rémy Virin",
+        "heading": "iOS buddy @ Meet Lima",
+        "twitter": "https://twitter.com/remyvirin",
+        "twitter-name": "@remyvirin",
+        "state": "Paris - France",
+        "recording": "Mf6N4QwHRO8",
+        "details": "Rémy is an iOS consultant. He discovered programming while he was coding in Fortran,\non openVMS. Since this time, Rémy loves coding and is always trying to find a better way to write software.\nHis clients are European banks and insurance companies, but also small startups,\nwhich is more enjoyable. He's got a passion for great UI, UX and quality code. H\ne thinks quality is not an option if one wants to ship great apps and maintain them in the future.<br>\nWhen he's not coding Rémy loves taking pictures with one of his Polaroid\ncamera, going to museums, and experimenting new gastronomy pleasure!\nHe is currently living and working in Paris, France.\n",
+        "title": "Continuous Integration, from Unit Tests to hardware",
+        "presentation-details": "In this talk, Rémy will explain what Continuous Integration is, and why you should use it.\nHe will show you concrete example on iOS and others devices. We'll talk about Jenkins, Sonar, bots etc...\n",
+        "hasSprite": true,
+        "spriteFrames": 38
+    },
+    "flash-1-matt-harasymczuk": {
+        "name": "Matt Harasymczuk",
+        "title": "West scrum story",
+        "recording": "2SPC02F-S5w",
+        "hasSprite": true,
+        "spriteFrames": 17
+    },
+    "flash-2-lukasz-gawin": {
+        "name": "Łukasz Gawin",
+        "title": "Once Upon a Time… Bugs",
+        "recording": "l260dUOxM3U",
+        "hasSprite": true,
+        "spriteFrames": 17
+    },
+    "flash-3-oguz-bastemur": {
+        "name": "Oguz Bastemur",
+        "title": "Multithreaded Javascript on the Server Side!",
+        "hasSprite": false,
+        "spriteFrames": 11
+    },
+    "flash-4-piotr-podziemski": {
+        "name": "Piotr Podziemski",
+        "title": "Cukeriada - an educational game designed for children suffering from type 1 diabetes",
+        "recording": "J4C7mzagFDI",
+        "hasSprite": true,
+        "spriteFrames": 13
+    },
+    "flash-5-lukasz-stefaniszyn": {
+        "name": "Łukasz Stefaniszyn",
+        "title": "Mobile applications - implementation of quality",
+        "recording": "ZQplRDnD-Dc",
+        "hasSprite": true,
+        "spriteFrames": 12
+    },
+    "flash-6-krzysztof-zablocki": {
+        "name": "Krzysztof Zabłocki",
+        "title": "Tips & Tricks for iOS Devs",
+        "recording": "n3f912f3Ruo",
+        "hasSprite": true,
+        "spriteFrames": 17
+    },
+    "registration": {
+        "name": "",
+        "title": "Registration",
+        "hasSprite": false
+    },
+    "opening": {
+        "name": "",
+        "title": "Opening",
+        "recording": "0dexxtrAkwE",
+        "hasSprite": true,
+        "spriteFrames": 11
+    },
+    "closing": {
+        "name": "",
+        "title": "Closing remarks",
+        "recording": "qJk_KvlEBXs",
+        "hasSprite": true,
+        "spriteFrames": 11
+    },
+    "lunch": {
+        "name": "",
+        "title": "Lunch",
+        "hasSprite": false
+    },
+    "afterparty": {
+        "name": "",
+        "title": "Afterparty",
+        "hasSprite": false
+    },
+    "mortal-kombat": {
+        "name": "",
+        "title": "Mortal Kombat",
+        "hasSprite": false
+    },
+    "fifa": {
+        "name": "",
+        "title": "Fifa",
+        "hasSprite": false
+    }
+
+}

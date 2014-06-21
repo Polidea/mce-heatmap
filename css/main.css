@@ -1,28 +1,53 @@
 
 .divWithBackground {
     background-image: url('../img/generated.jpg');
-    width: 640px;
-    height: 400px;
+    width: 800px;
+    height: 420px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
 .descriptionWrapper {
-    width:500px;
-    height: 24px;
+    width:800px;
+    height: 90px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.singleDescription {
+.bottomDescriptionWrapper {
+    width:800px;
+    height: 80px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.movieWrapper {
+    width:800px;
+    height: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singleMovie {
     width: 33%;
     height: 100%;
 }
 
+.singleDescription {
+    width: 33%;
+    height: 100%;
+    font-size: 14px;
+}
+
 .divRange {
-    width:500px;
+    width: 815px;
     text-align: center;
     visibility: hidden;
     margin-left: auto;
@@ -30,7 +55,8 @@
 }
 
 .divAnimate {
-    width:500px;
+    width:800px;
+    font-size: 23px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -38,7 +64,7 @@
 }
 
 .divLoading {
-    width:500px;
+    width:800px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -50,6 +76,22 @@
     margin-top: 40px;
     text-align: center;
 }
+
+.divControl {
+    display: block;
+    width:  57px;
+    height:  56px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame {
+    border: 1px solid rgb(193, 193, 193);
+    display: block;
+    width:  240px;
+    height:  135px;
+}
+
 body {
     margin: 8px;
 }

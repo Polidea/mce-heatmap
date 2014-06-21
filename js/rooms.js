@@ -2,6 +2,8 @@ var roomNames=['hall', 'room-1', 'room-2', 'room-3']
 var heatmaps = [];
 var currentHeatmapIndex = 0;
 
+var images = [];
+
 var animationRunning = false;
 var animation;
 var lastAnimationTime;
@@ -267,7 +269,7 @@ function animate() {
 function preloadSpriteImages() {
     for (key in movies) {
         if (movies[key].hasSprite) {
-            new Image().src = "snapshots/sprites/" + key + '.jpg'
+            images.push(new Image().src = "snapshots/sprites/" + key + '.jpg');
         }
     }
 }

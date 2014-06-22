@@ -135,7 +135,7 @@ function createHeatmap(elementId) {
         "visible": true,
         "opacity": 40,
         "width": 800,
-        "height": 420,
+        "height": 460,
         "gradient": {
             0.45: "rgb(0,0,255)",
             0.55: "rgb(0,255,255)",

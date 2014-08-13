@@ -6,8 +6,8 @@ MARGIN_COLOUR = (0, 0, 0)
 OUTLINE_COLOUR = (214, 230, 35)
 BACKGROUND_COLOUR = (0, 0, 0)
 
-MARGIN_WIDTH = 15
-MARGIN_HEIGHT = 15
+MARGIN_WIDTH = 20
+MARGIN_HEIGHT = 20
 
 room_names = ['hall', 'exit',
               'room-1', 'room-2', 'room-3',

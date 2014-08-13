@@ -129,27 +129,18 @@ function alternateHeatmap(heatmap) {
 }
 
 function createHeatmap(elementId) {
+    var container = $('#' + elementId).get(0);
     var config = {
-        "radius": 20,
-        "element": elementId,
+        "container" : container,
+        "radius": 25,
         "visible": true,
-        "opacity": 40,
-        "width": 800,
-        "height": 460,
-        "gradient": {
-            0.45: "rgb(0,0,255)",
-            0.55: "rgb(0,255,255)",
-            0.65: "rgb(0,255,0)",
-            0.95: "yellow",
-            1.0: "rgb(255,0,0)" }
+        "opacity": 0.6
     };
-    return heatmapFactory.create(config);
+    return h337.create(config);
 }
 
 function drawHeatmapOfPeople(index, heatmap) {
-    heatmap.clear();
-    heatmap.store.setDataSet(snapshots[index]['data_source']);
-
+    heatmap.setData(snapshots[index]['data_source']);
 }
 
 function getCurrentValue() {
@@ -221,8 +212,8 @@ function generateAndSwapHeatmapsIfValueChanged(value) {
     if (Math.round(lastValue) != newIndex) {
         var alternateHeatmapIndex = alternateHeatmap(currentHeatmap);
         updateHeatmap(newIndex, heatmaps[alternateHeatmapIndex]);
-        var oldHeatmap = heatmaps[currentHeatmap].get("canvas");
-        var newHeatmap = heatmaps[alternateHeatmapIndex].get("canvas");
+        var oldHeatmap = heatmaps[currentHeatmap]._renderer._canvas;
+        var newHeatmap = heatmaps[alternateHeatmapIndex]._renderer._canvas;
         currentHeatmap = alternateHeatmapIndex;
         $(oldHeatmap).hide();
         $(newHeatmap).show();

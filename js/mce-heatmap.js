@@ -131,10 +131,11 @@ function alternateHeatmap(heatmap) {
 function createHeatmap(elementId) {
     var container = $('#' + elementId).get(0);
     var config = {
-        "container" : container,
-        "radius": 25,
-        "visible": true,
-        "opacity": 0.6
+        container : container,
+        radius: 30,
+        minOpacity : 0,
+        maOpacity: 0.5,
+        blur: 0.95
     };
     return h337.create(config);
 }

@@ -2,7 +2,7 @@ Heatmap from MCE
 ----------------
 
 This is a [visualisation](http://polidea.github.com/mce-heatmap) of people movement and thus generated "heat" ;)
-during the [MCE 2014 conference](http://mceconf.com). 
+during the [MCE 2014 conference](http://2014.mceconf.com). 
 Data for this visualisation was taken from WiFi routers (which our IT team had setup and controlled). 
 The data is anonymous, and only reflects thenumber of people that were in every room and hall during the conference. 
 The conference took place in [Kino Praha](http://www.kinopraha.pl/) and we took advantage of the fact that cinema rooms
@@ -11,7 +11,7 @@ in each of the rooms and in the hall of the cinema separately.
 
 You can see the conference video including the venue at our official 
 [Conference Video](https://www.youtube.com/watch?v=o6nTonUoOfE&list=PL79il-55EZPs9RpNqHLmbN62i4qFWep3O) . You can also 
-see the video of accompanying [Jitter hackathon](http://jitter.io)
+see the video of accompanying [Jitter hackathon](http://2014.mceconf.com/hackathon.html)
 
 Data interpolation
 ------------------
@@ -25,7 +25,7 @@ Exit adjustments
 
 We only had data for the roooms, but since we see how many people left or entered one of the 3 rooms every minute, 
 or how many people left or entered the cinema every minute (total number of people in the cinema). 
-Therefore we adjusted the numbers and moved the people between the rooms/halls and appropriate exists. This is 
+Therefore we adjusted the numbers and moved the people between the rooms/halls and appropriate exits. This is 
 approximation of course, but it is good enough and it allowed for much smoother animation steps - almost showing how
 people are flowing between rooms.
 
@@ -39,7 +39,7 @@ directly to the related moment in the video.
 
 Navigation
 ----------
-You can either navigate the time manually using the range slider, or hit the play button to let animation start
+You can either navigate the time manually using the range slider, or hit the play button to let animation start. Left and right arrows works as well.
 
 
 Enjoy! And see you at the [MCE 2015 conference](http://mceconf.com)!

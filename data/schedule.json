@@ -2,37 +2,37 @@
     "room-1": [
         {
             "start": "10:00:00",
-            "end": "10:59:00",
+            "end": "10:50:00",
             "identifier": "eric-lafortune"
         },
         {
             "start": "11:00:00",
-            "end": "11:59:00",
+            "end": "11:40:00",
             "identifier": "wiebe-elsinga"
         },
         {
             "start": "12:00:00",
-            "end": "12:59:00",
+            "end": "12:42:00",
             "identifier": "alex-shirazi"
         },
         {
             "start": "15:00:00",
-            "end": "15:59:00",
+            "end": "15:41:00",
             "identifier": "cheng-luo"
         },
         {
             "start": "16:00:00",
-            "end": "16:59:00",
+            "end": "16:34:00",
             "identifier": "gal-cerf"
         },
         {
             "start": "17:00:00",
-            "end": "17:59:00",
+            "end": "17:46:00",
             "identifier": "cesare-rocchi"
         },
         {
             "start": "18:00:00",
-            "end": "18:59:00",
+            "end": "18:30:00",
             "identifier": "michele-capra"
         },
         {
@@ -44,22 +44,22 @@
     "room-2": [
         {
             "start": "09:49:00",
-            "end": "09:59:00",
+            "end": "09:51:00",
             "identifier": "opening"
         },
         {
             "start": "10:00:00",
-            "end": "10:59:00",
+            "end": "10:51:00",
             "identifier": "mike-lee"
         },
         {
             "start": "11:00:00",
-            "end": "11:59:00",
+            "end": "11:58:00",
             "identifier": "jackson-gabbard"
         },
         {
             "start": "12:00:00",
-            "end": "12:59:00",
+            "end": "12:58:00",
             "identifier": "kathryn-rotondo"
         },
         {
@@ -94,22 +94,22 @@
         },
         {
             "start": "15:00:00",
-            "end": "15:59:00",
+            "end": "15:53:00",
             "identifier": "drew-crawford"
         },
         {
             "start": "16:00:00",
-            "end": "16:59:00",
+            "end": "16:44:00",
             "identifier": "damian-mehers"
         },
         {
             "start": "17:00:00",
-            "end": "17:59:00",
+            "end": "17:57:00",
             "identifier": "rob-rusher"
         },
         {
             "start": "18:00:00",
-            "end": "18:48:00",
+            "end": "18:46:00",
             "identifier": "dave-wiskus"
         },
         {
@@ -121,12 +121,12 @@
     "room-3": [
         {
             "start": "10:00:00",
-            "end": "10:59:00",
+            "end": "10:49:00",
             "identifier": "chris-eidhof"
         },
         {
             "start": "11:00:00",
-            "end": "11:59:00",
+            "end": "11:44:00",
             "identifier": "orta-therox"
         },
         {
@@ -136,22 +136,22 @@
         },
         {
             "start": "15:00:00",
-            "end": "15:59:00",
+            "end": "15:55:00",
             "identifier": "tom-maes"
         },
         {
             "start": "16:00:00",
-            "end": "16:59:00",
+            "end": "16:48:00",
             "identifier": "peter-steinberger"
         },
         {
             "start": "17:00:00",
-            "end": "17:59:00",
+            "end": "17:49:00",
             "identifier": "john-ellenich"
         },
         {
             "start": "18:00:00",
-            "end": "18:59:00",
+            "end": "18:37:00",
             "identifier": "remy-virin"
         },
         {

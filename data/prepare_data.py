@@ -4,7 +4,7 @@ import json
 import os
 import random
 
-from configuration import rooms, room_names, MARGIN_HEIGHT, MARGIN_WIDTH
+from configuration import rooms, room_names, MARGIN_HEIGHT, MARGIN_WIDTH, EXCLUDED_HALL_AREAS
 
 
 def get_list_element(source, index):
@@ -80,6 +80,30 @@ data_source = []
 snapshots = []
 
 
+def is_point_excluded_from_hall(x, y, room):
+    absolute_x = x + room["x"]
+    absolute_y = y + room["y"]
+    for area in EXCLUDED_HALL_AREAS:
+        min_x = area[0]
+        min_y = area[1]
+        max_x = min_x + area[2]
+        max_y = min_y + area[3]
+
+        if min_x <= absolute_x <= max_x and min_y <= absolute_y <= max_y:
+            return True
+    return False
+
+
+def get_random_x_y_offset_for_room(room, room_name):
+    random_x_offset = random.randint(0, room['width'] - 2 * MARGIN_WIDTH - 1)
+    random_y_offset = random.randint(0, room['height'] - 2 * MARGIN_HEIGHT - 1)
+    if room_name == "hall":
+        while is_point_excluded_from_hall(random_x_offset, random_y_offset, room):
+            random_x_offset = random.randint(0, room['width'] - 2 * MARGIN_WIDTH - 1)
+            random_y_offset = random.randint(0, room['height'] - 2 * MARGIN_HEIGHT - 1)
+    return random_x_offset, random_y_offset
+
+
 def fill_room_with_people(snapshot, room_name, no_of_people, previous_snapshot):
     if previous_snapshot is not None:
         people_list = copy.copy(previous_snapshot[room_name])
@@ -88,8 +112,7 @@ def fill_room_with_people(snapshot, room_name, no_of_people, previous_snapshot):
     room = rooms[room_name]
     if len(people_list) < no_of_people:
         for i in range(len(people_list), no_of_people):
-            random_x_offset = random.randint(0, room['width'] - 2 * MARGIN_WIDTH - 1)
-            random_y_offset = random.randint(0, room['height'] - 2 * MARGIN_HEIGHT - 1)
+            random_x_offset, random_y_offset = get_random_x_y_offset_for_room(room, room_name)
             person = {
                 "x": room['x'] + random_x_offset + MARGIN_WIDTH,
                 "y": room['y'] + random_y_offset + MARGIN_HEIGHT,

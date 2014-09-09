@@ -1,5 +1,5 @@
 from configuration import rooms, IMAGE_WIDTH, IMAGE_HEIGHT, FILL_COLOUR, room_names, MARGIN_WIDTH, MARGIN_HEIGHT, \
-    MARGIN_COLOUR, OUTLINE_COLOUR, BACKGROUND_COLOUR
+    MARGIN_COLOUR, OUTLINE_COLOUR, BACKGROUND_COLOUR, EXCLUDED_HALL_AREAS, EXCLUDED_COLOUR
 import os
 
 
@@ -16,6 +16,16 @@ def draw_room(draw, room_name):
     #               (room['x']+room['width']+1 - MARGIN_WIDTH, room['y']+room['height']+1 - MARGIN_HEIGHT)],
     #               fill=None, outline=MARGIN_COLOUR)
 
+
+def draw_excluded_areas(draw):
+    for area in EXCLUDED_HALL_AREAS:
+        left = area[0]
+        top = area[1]
+        right = left + area[2]
+        bottom = top + area[3]
+        draw.rectangle([(left, top), (right, bottom)], fill=EXCLUDED_COLOUR)
+
+
 def generate_image():
     from PIL import Image, ImageDraw
     size = (IMAGE_WIDTH, IMAGE_HEIGHT)
@@ -23,6 +33,7 @@ def generate_image():
     draw = ImageDraw.Draw(im)
     for room_name in room_names[::-1]: # revert array to show better exits
         draw_room(draw, room_name)
+        draw_excluded_areas(draw)
     my_dir = os.path.dirname(os.path.realpath(__file__))
     im.save(my_dir + '/../img/generated.jpg')
 

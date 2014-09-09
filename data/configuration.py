@@ -1,41 +1,53 @@
 IMAGE_WIDTH = 800
-IMAGE_HEIGHT = 460
+IMAGE_HEIGHT = 434
 
+EXCLUDED_COLOUR = (255, 0, 0)
+EXIT_COLOUR = (0, 0, 255)
 FILL_COLOUR = (0, 0, 0)
 MARGIN_COLOUR = (0, 0, 0)
 OUTLINE_COLOUR = (214, 230, 35)
 BACKGROUND_COLOUR = (0, 0, 0)
 
-MARGIN_WIDTH = 20
-MARGIN_HEIGHT = 20
+MARGIN_WIDTH = 19
+MARGIN_HEIGHT = 19
 
 room_names = ['hall', 'exit',
               'room-1', 'room-2', 'room-3',
               'room-1-exit', 'room-2-exit', 'room-3-exit',
-              ]
+]
 
-ROOM_WIDTH = 220
-ROOM_HEIGHT = 300
-TOP_EDGE = 5
-ROOM_SPACING = 10
-ROOM_EXIT_WIDTH = 60
-HALL_SPACING = 20
-HALL_HEIGHT = 90
-ROOM_EXIT_1_OFFSET = 16
-ROOM_EXIT_3_OFFSET = 16
-EXIT_OFFSET = 16
-EXIT_WIDTH = 60
-EXIT_HEIGHT = 20
+ROOM_WIDTH = 180
+ROOM_HEIGHT = 240
+TOP_EDGE = 0
+ROOM_SPACING = 1
+ROOM_EXIT_WIDTH = 40
+HALL_SPACING = 5
+HALL_HEIGHT = 186
 
+ROOM_EXIT_1_OFFSET = 140
+ROOM_EXIT_2_OFFSET = 0
+ROOM_EXIT_3_OFFSET = 0
+
+EXIT_LEFT = 456
+EXIT_TOP = 394
+EXIT_WIDTH = 70
+EXIT_HEIGHT = 40
 
 HALL_WIDTH = ROOM_WIDTH * 3 + ROOM_SPACING * 2
-LEFT_EDGE = (IMAGE_WIDTH - HALL_WIDTH) / 2
+LEFT_EDGE = 108
+
+EXCLUDED_HALL_AREAS = (
+    # (left, top, width, height)
+    (0, TOP_EDGE + ROOM_HEIGHT + HALL_SPACING, LEFT_EDGE, 78),
+    (LEFT_EDGE + 3 * ROOM_WIDTH - MARGIN_WIDTH, 244, IMAGE_WIDTH - (LEFT_EDGE + 3 * ROOM_WIDTH - MARGIN_WIDTH), 75),
+    (EXIT_LEFT, IMAGE_HEIGHT - 2 * EXIT_HEIGHT, IMAGE_WIDTH - EXIT_LEFT, 2 * EXIT_HEIGHT),
+)
 
 rooms = {
     'hall': {
-        "x": LEFT_EDGE,
+        "x": 0,
         "y": TOP_EDGE + ROOM_HEIGHT + HALL_SPACING,
-        "width": HALL_WIDTH,
+        "width": IMAGE_WIDTH,
         "height": HALL_HEIGHT
     },
     'room-1': {
@@ -57,7 +69,7 @@ rooms = {
         "height": ROOM_HEIGHT
     },
     'room-2-exit': {
-        "x": LEFT_EDGE + ROOM_WIDTH + ROOM_SPACING + ROOM_WIDTH / 2 - ROOM_EXIT_WIDTH / 2,
+        "x": LEFT_EDGE + ROOM_WIDTH + ROOM_SPACING + ROOM_EXIT_2_OFFSET,
         "y": TOP_EDGE + ROOM_HEIGHT - MARGIN_HEIGHT * 2,
         "width": ROOM_EXIT_WIDTH,
         "height": HALL_SPACING + MARGIN_HEIGHT * 4
@@ -75,9 +87,9 @@ rooms = {
         "height": HALL_SPACING + MARGIN_HEIGHT * 4
     },
     'exit': {
-        "x": LEFT_EDGE + 3 * ROOM_WIDTH + 2 * ROOM_SPACING - EXIT_OFFSET - EXIT_WIDTH,
-        "y": TOP_EDGE + ROOM_HEIGHT + HALL_SPACING + HALL_HEIGHT - MARGIN_HEIGHT,
+        "x": EXIT_LEFT,
+        "y": EXIT_TOP,
         "width": EXIT_WIDTH,
-        "height": EXIT_HEIGHT + MARGIN_HEIGHT * 2
+        "height": EXIT_HEIGHT,
     }
 }

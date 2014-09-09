@@ -1,99 +1,230 @@
+body {
+  font-family: "Lato";
+  font-weight: 300;
+  margin: 8px; }
+
+.wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  position: relative; }
+
+.header {
+  display: inline-block;
+  margin-bottom: 30px;
+  clear: both; }
+  .header img {
+    width: 330px;
+    float: left; }
+  .header p {
+    color: white;
+    margin: 5px 0 0 35px;
+    font-size: 20px;
+    float: left; }
 
 .divWithBackground {
-    background: url('../img/kino_praha_heatmap.svg') no-repeat;
-    width: 800px;
-    height: 434px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
+  background: url("../img/kino_praha_heatmap.png") no-repeat;
+  width: 750px;
+  height: 454px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+  .divWithBackground .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 454px;
+    z-index: 10;
+    text-align: center; }
+    .divWithBackground .overlay .play {
+      cursor: pointer;
+      opacity: 1;
+      display: block;
+      margin: 80px auto 0px auto; }
+    .divWithBackground .overlay .txt {
+      display: block;
+      font-size: 30px;
+      margin: 20px auto; }
 
 .descriptionWrapper {
-    width:800px;
-    height: 90px;
+  position: relative;
+  width: 750px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 16px;
+  color: white; }
+  .descriptionWrapper .inside {
+    display: none; }
+  .descriptionWrapper .author {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+    line-height: 30px;
+    display: inline-block;
+    width: 100%;
+    font-size: 17px; }
 
 .bottomDescriptionWrapper {
-    width:800px;
-    height: 80px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.movieWrapper {
-    width:800px;
-    height: 60px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+  width: 750px;
+  height: 20px;
+  text-align: center;
+  margin: 15px auto 0px auto; }
 
 .singleMovie {
-    width: 33%;
-    height: 100%;
-}
+  width: 209px;
+  height: 118px;
+  position: absolute; }
+
+#room-1 {
+  left: 50px;
+  top: 0px; }
+
+#room-2 {
+  left: 265px;
+  top: 0px; }
+
+#room-3 {
+  left: 483px;
+  top: 0px; }
+
+#room-1-movie-container, #room1 {
+  left: 52px;
+  top: 4px; }
+
+#room-2-movie-container {
+  left: 266px;
+  top: 4px; }
+
+#room-3-movie-container {
+  left: 483px;
+  top: 4px; }
 
 .singleDescription {
-    width: 33%;
-    height: 100%;
-    font-size: 14px;
-}
+  display: block;
+  width: 209px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-align: left;
+  position: absolute; }
 
 .divRange {
-    width: 815px;
-    text-align: center;
-    visibility: hidden;
-    margin-left: auto;
-    margin-right: auto;
-}
+  width: 815px;
+  text-align: center;
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto; }
 
 .divAnimate {
-    width:800px;
-    font-size: 23px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    visibility: hidden;
-}
+  width: 750px;
+  font-size: 23px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden; }
 
 .divLoading {
-    width:800px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    visibility: visible;
-}
-
+  width: 750px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: visible; }
 
 .divTime {
-    margin-top: 40px;
-    text-align: center;
-}
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 40px;
+  width: 100%;
+  clear: both;
+  text-align: center; }
 
 .divControl {
-    display: block;
-    width:  57px;
-    height:  56px;
-    margin-left: auto;
-    margin-right: auto;
-}
+  display: block;
+  width: 57px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .frame {
-    border: 1px solid rgb(193, 193, 193);
-    display: block;
-    width:  240px;
-    height:  135px;
-    margin-left: auto;
-    margin-right: auto;
-}
+  display: block;
+  width: 209px;
+  height: 118px;
+  margin-left: auto;
+  margin-right: auto; }
 
-body {
-    margin: 8px;
-}
+.icon {
+  background: url("../img/sprites.png") no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer; }
+  .icon.icon-pause {
+    background-position: 0px 0px; }
+    .icon.icon-pause:hover {
+      background-position: 0px -40px; }
+  .icon.icon-play {
+    background-position: -40px 0px; }
+    .icon.icon-play:hover {
+      background-position: -40px -40px; }
+  .icon.icon-twitter {
+    background-position: -80px 0px; }
+    .icon.icon-twitter:hover {
+      background-position: -80px -40px; }
+  .icon.icon-github {
+    background-position: -120px 0px; }
+    .icon.icon-github:hover {
+      background-position: -120px -40px; }
+  .icon.icon-facebook {
+    background-position: -160px 0px; }
+    .icon.icon-facebook:hover {
+      background-position: -160px -40px; }
+
+.rangeslider {
+  width: 710px !important;
+  top: 20px !important;
+  float: right; }
+
+.play-pause {
+  float: left; }
+
+.footer {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px; }
+  .footer a {
+    text-decoration: none; }
+  .footer .info {
+    width: 530px;
+    margin: 0 auto;
+    text-align: justify; }
+  .footer .social {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%; }
+    .footer .social div {
+      width: 151px;
+      margin: 30px auto;
+      display: block;
+      height: 40px; }
+      .footer .social div .icon {
+        display: inline-block !important;
+        margin-left: 5px;
+        margin-right: 5px;
+        float: left; }
+  .footer .mce2015 {
+    cursor: pointer;
+    margin: 20px auto;
+    color: #d3dd2a;
+    border: 1px solid #d3dd2a;
+    width: 300px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center; }
+    .footer .mce2015:hover {
+      color: #e5eb82;
+      border-color: #e5eb82; }

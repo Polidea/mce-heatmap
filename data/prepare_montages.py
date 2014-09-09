@@ -35,12 +35,12 @@ extract = [
 for video in extract:
     movie = video[0]
     identifier = video[1]
-    command = "/usr/local/bin/convert ../snapshots/{identifier}-00001.jpg -resize 240x135 " \
+    command = "/usr/local/bin/convert ../snapshots/{identifier}-00001.jpg -resize 209x118 " \
               "../snapshots/sprites/{identifier}-texture.jpg" \
               "".format(identifier=identifier)
     print "Executing " + command
     os.system(command)
-    command = "/usr/local/bin/montage -geometry 240x135 -size 2400x810 -background 'rgb(0,0,0)'" \
+    command = "/usr/local/bin/montage -geometry 209x118 -size 2090x708 -background 'rgb(0,0,0)'" \
               " -tile 10x ../snapshots/{identifier}*.jpg" \
               " ../snapshots/sprites/{identifier}.jpg" \
               "".format(identifier=identifier)

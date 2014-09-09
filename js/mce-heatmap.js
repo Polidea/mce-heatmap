@@ -11,11 +11,11 @@ var lastAnimationTime;
 var TOTAL_ANIMATION_LENGTH = 60;
 var NUMBER_OF_ENTRIES = 163 * 5;
 
-var IMAGE_WIDTH = 240;
-var IMAGE_HEIGHT = 135;
+var IMAGE_WIDTH = 209;
+var IMAGE_HEIGHT = 118;
 var SPRITES_PER_ROW = 10;
 
-var single_step_time = TOTAL_ANIMATION_LENGTH * 1000.0 / NUMBER_OF_ENTRIES;
+var single_step_time = TOTAL_ANIMATION_LENGTH * 2000.0 / NUMBER_OF_ENTRIES;
 var MAX_VALUE = 2;
 
 var lastValue = 0;
@@ -28,7 +28,7 @@ var curVal = 0;
 
 var myRequestAnimationFrame =
     window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 var myCancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
 function findInSchedule(roomName, time) {
@@ -64,33 +64,37 @@ function fillDescriptionsAndImages(time) {
     for (var i = 0; i < roomNames.length; i++) {
         var roomName = roomNames[i];
         var imageJquery = $("#" + roomName + "-movie");
-        var roomDescription = $('#' + roomName);
+        var room = $('#' + roomName);
         var movieHref = $('#' + roomName + "-movie-href");
         imageJquery.css("background", "black");
-        roomDescription.html("");
+        room.find(".author").html("");
+        room.find(".title").html("");
         movieHref.removeAttr("href");
         movieHref.removeProp("href");
         var identifier = findInSchedule(roomName, time);
         if (identifier != "") {
-            var description = movies[identifier].title;
-            if (movies[identifier].name != "") {
-                description = movies[identifier].name + "<br><br>" + description;
-            }
+            room.find("room-number").show();
+            var title = movies[identifier].title;
+            var author = movies[identifier].name;
+
             var currentIndex = timeSnapshotIndex[time];
             var startIndex = movieSnapshotIndex[identifier];
             var offset = currentIndex - startIndex;
             if (debug) {
-                description = "[" + offset + "]<br>" + description;
+                title = "[" + offset + "]<br>" + title;
             }
 
             setSprite(imageJquery, identifier, offset);
-            roomDescription.html(description);
+            if (author != "") room.find(".author").html(author.toUpperCase()+"<br/>");
+            if (title != "") room.find(".title").html(title);
             if (movies[identifier].hasSprite) {
                 var href = "https://www.youtube.com/watch?v=" + movies[identifier].recording + "&t=" +
                     offset + "m3s&list=PL79il-55EZPvAXReeaFE5Hfo4p_3TfpvX";
                 movieHref.prop("href", href);
                 movieHref.attr("href", href);
             }
+        } else{
+            room.find("room-number").hide();
         }
     }
 }
@@ -131,10 +135,10 @@ function alternateHeatmap(heatmap) {
 function createHeatmap(elementId) {
     var container = $('#' + elementId).get(0);
     var config = {
-        container : container,
+        container: container,
         radius: 30,
-        minOpacity : 0,
-        maOpacity: 0.5,
+        minOpacity: 0,
+        maxOpacity: 0.7,
         blur: 0.95
     };
     return h337.create(config);
@@ -182,7 +186,13 @@ function setupRangeInput() {
 
 function updateHeatmap(index, heatmap) {
     drawHeatmapOfPeople(index, heatmap);
-    $('#timeDiv').html(snapshots[index].time);
+    var date = "2014-01-11 " + snapshots[index].time;
+    var dateObj = new Date(date);
+    var am_pm = dateObj.getHours() < 12 ? "AM": "PM";
+    var hour = dateObj.getHours() <= 12 ? dateObj.getHours() : dateObj.getHours() - 12;
+    var minute = dateObj.getMinutes() < 10 ? "0"+dateObj.getMinutes(): dateObj.getMinutes();
+    var dateToShow = hour + ":" + minute + " " + am_pm;
+    $('#timeDiv').html(dateToShow);
     fillDescriptionsAndImages(snapshots[index].time);
 }
 
@@ -224,19 +234,21 @@ function generateAndSwapHeatmapsIfValueChanged(value) {
 
 function animationStart() {
     if (!animationRunning) {
+        if(curVal+1>=NUMBER_OF_ENTRIES){
+            curVal=0;
+        }
         animationRunning = true;
         animation = myRequestAnimationFrame(animate);
         lastAnimationTime = Date.now();
     }
-    $('#controlDiv').css("background", "url(img/media_player_button.png) 0px 0px");
-}
+    $(".play-pause").removeClass("icon-play").addClass('icon-pause');}
 
 function animationStop() {
     if (animationRunning) {
         animationRunning = false;
         myCancelAnimationFrame(animation);
     }
-    $('#controlDiv').css("background", "url(img/media_player_button.png) -122px 0px");
+    $(".play-pause").removeClass("icon-pause").addClass('icon-play');
 }
 
 function toggleAnimation() {
@@ -267,6 +279,7 @@ function animate() {
 
 
 function preloadSpriteImages() {
+    console.log(movies);
     for (var key in movies) {
         if (movies.hasOwnProperty(key)) {
             if (movies[key].hasSprite) {

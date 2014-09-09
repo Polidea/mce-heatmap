@@ -1,83 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="css/rangeslider.css" media="screen"/>
 </head>
 <body style="background: black; color: rgb(214, 230, 35);">
-<table class="movieWrapper">
-    <tr>
-        <td class="singleMovie" valign="top">
-            <a href="" id="room-1-movie-href" target="_blank">
-                <div id="room-1-movie" class="frame"></div>
-            </a>
-        </td>
-        <td class="singleMovie" valign="top">
-            <a href="" id="room-2-movie-href" target="_blank">
-                <div id="room-2-movie" class="frame"></div>
-            </a>
-        </td>
-        <td class="singleMovie" valign="top">
-            <a href="" id="room-3-movie-href" target="_blank">
-                <div id="room-3-movie" class="frame"></div>
-            </a>
-        </td>
-    </tr>
-</table>
-<table class="descriptionWrapper">
-    <tr>
-        <td id="room-1" class="singleDescription" valign="top"></td>
-        <td id="room-2" class="singleDescription" valign="top"></td>
-        <td id="room-3" class="singleDescription" valign="top"></td>
-    </tr>
-</table>
-<div id="mainDiv" class="divWithBackground">
-</div>
-<div id="hall" class="bottomDescriptionWrapper">
-</div>
 
-<div id="rangeDiv" class="divRange">
-    <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
-</div>
-<div id="timeDiv" class="divTime">
-</div>
-<div id="loadingDiv" class="divLoading">
-    Loading...
-</div>
-<div id="animateButtonDiv" class="divAnimate">
-    <div id="controlDiv" width="56px" height="56px" onclick="toggleAnimation()" class="divControl"></div>
-</div>
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/rangeslider.js"></script>
-<script type="text/javascript" src="js/heatmap.js"></script>
-<script type="text/javascript" src="js/mce-heatmap.js"></script>
-<script type="text/javascript">
-    var dataSource;
-    var snapshots;
-    var movies;
-    var schedule;
-    window.onload = function () {
-        $.when(
-                        $.getJSON("data/data_source.json").done(function (data) {
-                            dataSource = data;
-                        }),
-                        $.getJSON("data/snapshots.json").done(function (data) {
-                            snapshots = data;
-                        }),
-                        $.getJSON("data/movies.json").done(function (data) {
-                            movies = data;
-                        }),
-                        $.getJSON("data/schedule.json").done(function (data) {
-                            schedule = data;
-                        })
-                ).
-                then(function () {
-                    prepareAllData();
-                    enableAnimatedButtons();
+<div class="wrapper">
 
-                });
-    }
-</script>
+    <div class="header">
+        <img src="img/mce-logo.png" alt="MCE logo"/>
 
+        <p>A glowing example of wifi activity visualisation <br/>
+            from the previous edition of MCE conference</p>
+    </div>
+
+    <div class="descriptionWrapper">
+        <div class="inside">
+            <div id="room-1" class="singleDescription">
+                <span class="author"></span>
+                <span class="title"></span>
+            </div>
+            <div id="room-2" class="singleDescription">
+                <span class="author"></span>
+                <span class="title"></span>
+            </div>
+            <div id="room-3" class="singleDescription">
+                <span class="author"></span>
+                <span class="title"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mainDiv" class="divWithBackground">
+        <div class="overlay">
+            <img src="img/play.png" class="play"/>
+            <span class="txt">Click to watch</span>
+        </div>
+        <div class="overlayed">
+            <div class="singleMovie" id="room-1-movie-container">
+                <a href="" id="room-1-movie-href" target="_blank">
+                    <div id="room-1-movie" class="frame"></div>
+                </a>
+            </div>
+
+            <div class="singleMovie" id="room-2-movie-container">
+                <a href="" id="room-2-movie-href" target="_blank">
+                    <div id="room-2-movie" class="frame"></div>
+                </a>
+            </div>
+            <div class="singleMovie" id="room-3-movie-container">
+                <a href="" id="room-3-movie-href" target="_blank">
+                    <div id="room-3-movie" class="frame"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="hall" class="bottomDescriptionWrapper">
+        <span class="author"></span>
+        <span class="title"></span>
+    </div>
+    <div>
+
+        <div id="rangeDiv" class="divRange">
+            <span class="icon icon-play play-pause" onclick="toggleAnimation()"></span>
+            <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
+        </div>
+        <div id="timeDiv" class="divTime">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="info">
+            MCE is a conference created for geeks, by geeks. We love technical details, specifications, snazzy hacks
+            and gimmicks - so we decided to put the WiFi data we gathered to good use and make a neat visualisation of
+            what people got up to at MCE 2014. If you feel we are kindred spirits and want to find out all about next
+            year's edition.
+            <br/>
+            <br/>
+            We do this, because want to make a great conference and because we love making cool stuff. We don't do this
+            to spy on the people who attended our event. Hence, all the data is anonymous, we didn't dig around any
+            smartphones to find doctors appointments and we won't send any teenage daughters prenatal meds. Oh, or sell
+            the data to facebook.
+            <br/>
+        </div>
+
+        <div class="social">
+            follow us on
+            <br/>
+
+            <div>
+                <a href="https://twitter.com/mceconf"><span class="icon icon-twitter"></span></a>
+                <a href="https://github.com/Polidea/mce-heatmap"><span class="icon icon-github"></span></a>
+                <a href="https://www.facebook.com/MobileCentralEurope"><span class="icon icon-facebook"></span></a>
+            </div>
+        </div>
+
+        <a href="http://mceconf.com">
+            <div class="mce2015">visit MCE 2015 page</div>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/rangeslider.js"></script>
+    <script type="text/javascript" src="js/heatmap.js"></script>
+    <script type="text/javascript" src="js/mce-heatmap.js"></script>
+    <script type="text/javascript">
+        var dataSource;
+        var snapshots;
+        var movies;
+        var schedule;
+        $(".play").click(function () {
+            $(".play").hide();
+            $(".txt").html("Loading...");
+            $.when(
+                    $.getJSON("data/data_source.json").done(function (data) {
+                        dataSource = data;
+                    }),
+                    $.getJSON("data/snapshots.json").done(function (data) {
+                        snapshots = data;
+                    }),
+                    $.getJSON("data/movies.json").done(function (data) {
+                        movies = data;
+                    }),
+                    $.getJSON("data/schedule.json").done(function (data) {
+                        schedule = data;
+                    })
+            ).
+                    then(function () {
+                        prepareAllData();
+                        enableAnimatedButtons();
+                        $(".overlay").hide();
+                        $(".descriptionWrapper").find(".inside").show();
+                        toggleAnimation();
+                    });
+        });
+    </script>
+</div>
 </body>
 </html>

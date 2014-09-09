@@ -23,7 +23,7 @@ extract = [
     ["s2p5_Damian_Mehers", "damian-mehers"],
     ["s2p6_Rob_Rusher", "rob-rusher"],
     ["s2p7_Dave_Wiskus", "dave-wiskus"],
-    ["s3p1_Chris_Eidhof", "chris-eidhof"],
+    ["s3p1_Chris_Eindhof", "chris-eidhof"],  # there is a typo on disk
     ["s3p2_Orta_Therox", "orta-therox"],
     ["s3p3_Jon_Reid", "jon-reid"],
     ["s3p4_Tom_Maes", "tom-maes"],
@@ -37,7 +37,7 @@ for video in extract:
     image = video[1]
     command = "/usr/local/bin/ffmpeg -ss 00:00:03 -i /Volumes/MCE_FINAL/{movie}.mp4 " \
               "-bt 200M -vf fps=fps=1/60 -f image2 " \
-              "/Users/potiuk/Code/mce-heatmap/snapshots/{image}-%05d.jpg" \
+              "/Users/dariusz/projects/mce-heatmap/snapshots/{image}-%05d.jpg" \
               "".format(movie=movie, image=image)
     print "Executing " + command
     os.system(command)

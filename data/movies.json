@@ -273,83 +273,83 @@
         "spriteFrames": 38
     },
     "flash-1-matt-harasymczuk": {
-        "name": "Matt Harasymczuk",
-        "title": "West scrum story",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "recording": "2SPC02F-S5w",
         "hasSprite": true,
         "spriteFrames": 17
     },
     "flash-2-lukasz-gawin": {
-        "name": "Łukasz Gawin",
-        "title": "Once Upon a Time… Bugs",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "recording": "l260dUOxM3U",
         "hasSprite": true,
         "spriteFrames": 17
     },
     "flash-3-oguz-bastemur": {
-        "name": "Oguz Bastemur",
-        "title": "Multithreaded Javascript on the Server Side!",
-        "hasSprite": false,
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
+        "hasSprite": true,
         "spriteFrames": 11
     },
     "flash-4-piotr-podziemski": {
-        "name": "Piotr Podziemski",
-        "title": "Cukeriada - an educational game designed for children suffering from type 1 diabetes",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "recording": "J4C7mzagFDI",
         "hasSprite": true,
         "spriteFrames": 13
     },
     "flash-5-lukasz-stefaniszyn": {
-        "name": "Łukasz Stefaniszyn",
-        "title": "Mobile applications - implementation of quality",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "recording": "ZQplRDnD-Dc",
         "hasSprite": true,
         "spriteFrames": 12
     },
     "flash-6-krzysztof-zablocki": {
-        "name": "Krzysztof Zabłocki",
-        "title": "Tips & Tricks for iOS Devs",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "recording": "n3f912f3Ruo",
         "hasSprite": true,
         "spriteFrames": 17
     },
     "registration": {
-        "name": "",
-        "title": "Registration",
+        "name": "Registration",
+        "title": "",
         "hasSprite": false
     },
     "opening": {
-        "name": "",
-        "title": "Opening",
+        "name": "Opening",
+        "title": "",
         "recording": "0dexxtrAkwE",
         "hasSprite": true,
         "spriteFrames": 11
     },
     "closing": {
-        "name": "",
-        "title": "Closing remarks",
+        "name": "Closing remarks",
+        "title": "",
         "recording": "qJk_KvlEBXs",
         "hasSprite": true,
         "spriteFrames": 11
     },
     "lunch": {
-        "name": "",
-        "title": "Lunch",
+        "name": "Lunch & FLASHTALKS",
+        "title": "",
         "hasSprite": false
     },
     "afterparty": {
-        "name": "",
-        "title": "Afterparty",
+        "name": "Afterparty",
+        "title": "",
         "hasSprite": false
     },
     "mortal-kombat": {
-        "name": "",
-        "title": "Mortal Kombat",
+        "name": "Mortal Kombat",
+        "title": "",
         "hasSprite": false
     },
     "fifa": {
-        "name": "",
-        "title": "Fifa",
+        "name": "Fifa",
+        "title": "",
         "hasSprite": false
     }
 

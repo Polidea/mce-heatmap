@@ -34,14 +34,15 @@
             "start": "18:00:00",
             "end": "18:30:00",
             "identifier": "michele-capra"
-        },
-        {
-            "start": "19:30:00",
-            "end": "22:35:00",
-            "identifier": "mortal-kombat"
         }
     ],
     "room-2": [
+        {
+            "start": "09:00:00",
+            "end": "09:48:00",
+            "identifier": "registration"
+        },
+
         {
             "start": "09:49:00",
             "end": "09:51:00",
@@ -63,7 +64,7 @@
             "identifier": "kathryn-rotondo"
         },
         {
-            "start": "13:10:00",
+            "start": "13:00:00",
             "end": "13:26:00",
             "identifier": "flash-1-matt-harasymczuk"
         },
@@ -89,7 +90,7 @@
         },
         {
             "start": "14:25:00",
-            "end": "14:41:00",
+            "end": "14:49:00",
             "identifier": "flash-6-krzysztof-zablocki"
         },
         {
@@ -116,6 +117,11 @@
             "start": "18:50:00",
             "end": "19:01:00",
             "identifier": "closing"
+        },
+        {
+            "start": "19:10:00",
+            "end": "22:35:00",
+            "identifier": "afterparty"
         }
     ],
     "room-3": [
@@ -153,28 +159,8 @@
             "start": "18:00:00",
             "end": "18:37:00",
             "identifier": "remy-virin"
-        },
-        {
-            "start": "19:30:00",
-            "end": "22:35:00",
-            "identifier": "fifa"
         }
     ],
     "hall": [
-        {
-            "start": "09:00:00",
-            "end": "09:59:00",
-            "identifier": "registration"
-        },
-        {
-            "start": "13:00:00",
-            "end": "14:59:00",
-            "identifier": "lunch"
-        },
-        {
-            "start": "19:10:00",
-            "end": "22:35:00",
-            "identifier": "afterparty"
-        }
     ]
 }

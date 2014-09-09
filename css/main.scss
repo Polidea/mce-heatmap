@@ -1,0 +1,289 @@
+$width: 750px;
+$yellow: #d3dd2a;
+
+body {
+  font-family: "Lato";
+  font-weight: 300;
+  margin: 8px;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.header {
+  display: inline-block;
+  margin-bottom: 30px;
+  img {
+    width: 330px;
+    float: left;
+  }
+  p {
+    color: white;
+    margin: 5px 0 0 35px;
+    font-size: 20px;
+    float: left;
+  }
+  clear: both;
+}
+
+.divWithBackground {
+  background: url('../img/kino_praha_heatmap.png') no-repeat;
+  width: $width;
+  height: 454px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 454px;
+    z-index: 10;
+    text-align: center;
+    .play {
+      cursor: pointer;
+      opacity: 1;
+      display: block;
+      margin: 80px auto 0px auto;
+    }
+    .txt {
+      display: block;
+      font-size: 30px;
+      margin: 20px auto;
+    }
+  }
+}
+
+.descriptionWrapper {
+  position: relative;
+  width: $width;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: left;
+  font-size: 16px;
+  color:white;
+
+  .inside{
+      display: none;
+  }
+  .author {
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+  }
+  .title {
+
+  }
+}
+
+.bottomDescriptionWrapper {
+  width: $width;
+  height: 20px;
+  text-align: center;
+  margin: 15px auto 0px auto;
+}
+
+.singleMovie {
+  width: 209px;
+  height: 118px;
+  position: absolute;
+}
+
+#room-1 {
+  left: 50px;
+  top: 0px;
+}
+
+#room-2 {
+  left: 265px;
+  top: 0px;
+}
+
+#room-3 {
+  left: 483px;
+  top: 0px;
+}
+
+#room-1-movie-container, #room1 {
+  left: 52px;
+  top: 4px;
+}
+
+#room-2-movie-container {
+  left: 266px;
+  top: 4px;
+}
+
+#room-3-movie-container {
+  left: 483px;
+  top: 4px;
+}
+
+.singleDescription {
+  display: block;
+  width: 209px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-align: left;
+  position: absolute;
+}
+
+.divRange {
+  width: 815px;
+  text-align: center;
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divAnimate {
+  width: $width;
+  font-size: 23px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+}
+
+.divLoading {
+  width: $width;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: visible;
+}
+
+.divTime {
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 40px;
+  width: 100%;
+  clear: both;
+  text-align: center;
+}
+
+.divControl {
+  display: block;
+  width: 57px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.frame {
+  display: block;
+  width: 209px;
+  height: 118px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon {
+  background: url("../img/sprites.png") no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+
+  &.icon-pause {
+    background-position: 0px 0px;
+    &:hover {
+      background-position: 0px -40px;
+    }
+  }
+  &.icon-play {
+    background-position: -40px 0px;
+    &:hover {
+      background-position: -40px -40px;
+    }
+  }
+  &.icon-twitter {
+    background-position: -80px 0px;
+    &:hover {
+      background-position: -80px -40px;
+    }
+  }
+  &.icon-github {
+    background-position: -120px 0px;
+    &:hover {
+      background-position: -120px -40px;
+    }
+  }
+  &.icon-facebook {
+    background-position: -160px 0px;
+    &:hover {
+      background-position: -160px -40px;
+    }
+  }
+}
+
+.rangeslider {
+  width: 710px !important;
+  top: 20px !important;
+  float: right;
+}
+
+.play-pause {
+  float: left;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+  .info {
+    width: 530px;
+    margin: 0 auto;
+    text-align: justify;
+
+  }
+  .social {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    div {
+      width: 151px;
+      margin: 30px auto;
+      display: block;
+      height: 40px;
+      .icon {
+        display: inline-block !important;
+        margin-left: 5px;
+        margin-right: 5px;
+        float: left;
+      }
+    }
+  }
+
+  .mce2015 {
+    cursor: pointer;
+    margin: 20px auto;
+    color: $yellow;
+    border: 1px solid $yellow;
+    width: 300px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+    &:hover {
+      color: #e5eb82;
+      border-color: #e5eb82;
+    }
+  }
+}

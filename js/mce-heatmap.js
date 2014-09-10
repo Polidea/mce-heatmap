@@ -85,7 +85,7 @@ function fillDescriptionsAndImages(time) {
             }
 
             setSprite(imageJquery, identifier, offset);
-            if (author != "") room.find(".author").html(author.toUpperCase()+"<br/>");
+            if (author != "") room.find(".author").html(author.toUpperCase() + "<br/>");
             if (title != "") room.find(".title").html(title);
             if (movies[identifier].recording != "") {
                 var href = "https://www.youtube.com/watch?v=" + movies[identifier].recording + "&t=" +
@@ -93,7 +93,7 @@ function fillDescriptionsAndImages(time) {
                 movieHref.prop("href", href);
                 movieHref.attr("href", href);
             }
-        } else{
+        } else {
             room.find("room-number").hide();
         }
     }
@@ -186,11 +186,13 @@ function setupRangeInput() {
 
 function updateHeatmap(index, heatmap) {
     drawHeatmapOfPeople(index, heatmap);
-    var date = "2014-01-11 " + snapshots[index].time;
-    var dateObj = new Date(date);
-    var am_pm = dateObj.getHours() < 12 ? "AM": "PM";
-    var hour = dateObj.getHours() <= 12 ? dateObj.getHours() : dateObj.getHours() - 12;
-    var minute = dateObj.getMinutes() < 10 ? "0"+dateObj.getMinutes(): dateObj.getMinutes();
+    var dateParts = snapshots[index].time.split(":");
+    var hour = parseInt(dateParts[0]);
+    var minute = parseInt(dateParts[1]);
+    var dateObj = new Date(2014, 1, 11, hour, minute);
+    var am_pm = hour < 12 ? "AM" : "PM";
+    hour = hour <= 12 ? hour : hour - 12;
+    minute = minute < 10 ? "0" + minute : minute;
     var dateToShow = hour + ":" + minute + " " + am_pm;
     $('#timeDiv').html(dateToShow);
     fillDescriptionsAndImages(snapshots[index].time);
@@ -234,14 +236,15 @@ function generateAndSwapHeatmapsIfValueChanged(value) {
 
 function animationStart() {
     if (!animationRunning) {
-        if(curVal+1>=NUMBER_OF_ENTRIES){
-            curVal=0;
+        if (curVal + 1 >= NUMBER_OF_ENTRIES) {
+            curVal = 0;
         }
         animationRunning = true;
         animation = myRequestAnimationFrame(animate);
         lastAnimationTime = Date.now();
     }
-    $(".play-pause").removeClass("icon-play").addClass('icon-pause');}
+    $(".play-pause").removeClass("icon-play").addClass('icon-pause');
+}
 
 function animationStop() {
     if (animationRunning) {
@@ -279,7 +282,6 @@ function animate() {
 
 
 function preloadSpriteImages() {
-    console.log(movies);
     for (var key in movies) {
         if (movies.hasOwnProperty(key)) {
             if (movies[key].hasSprite) {

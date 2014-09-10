@@ -87,7 +87,7 @@ function fillDescriptionsAndImages(time) {
             setSprite(imageJquery, identifier, offset);
             if (author != "") room.find(".author").html(author.toUpperCase()+"<br/>");
             if (title != "") room.find(".title").html(title);
-            if (movies[identifier].hasSprite) {
+            if (movies[identifier].recording != "") {
                 var href = "https://www.youtube.com/watch?v=" + movies[identifier].recording + "&t=" +
                     offset + "m3s&list=PL79il-55EZPvAXReeaFE5Hfo4p_3TfpvX";
                 movieHref.prop("href", href);

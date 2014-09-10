@@ -74,7 +74,8 @@ body {
 .singleMovie {
   width: 209px;
   height: 118px;
-  position: absolute; }
+  position: absolute;
+  z-index: 1; }
 
 #room-1 {
   left: 50px;

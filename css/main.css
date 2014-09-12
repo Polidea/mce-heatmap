@@ -8,152 +8,164 @@ body {
   margin: 30px auto;
   position: relative; }
 
-.header {
-  display: inline-block;
-  margin-bottom: 30px;
-  clear: both; }
-  .header img {
-    width: 330px;
-    float: left; }
-  .header p {
-    color: white;
-    margin: 5px 0 0 35px;
-    font-size: 20px;
-    float: left; }
+#mobile {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 14px; }
+  @media screen and (min-width: 768px) {
+    #mobile {
+      display: none; } }
+  #mobile p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left; }
+  #mobile .logo {
+    width: 85%; }
+  #mobile .heading {
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  #mobile .pre-yt {
+    margin-bottom: 20px; }
+  #mobile .post-yt {
+    margin-top: 20px; }
 
-.divWithBackground {
-  background: url("../img/kino_praha_heatmap.png") no-repeat;
-  width: 750px;
-  height: 454px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto; }
-  .divWithBackground .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 454px;
-    z-index: 10;
-    text-align: center; }
-    .divWithBackground .overlay .play {
-      cursor: pointer;
-      opacity: 1;
-      display: block;
-      margin: 80px auto 0px auto; }
-    .divWithBackground .overlay .txt {
-      display: block;
-      font-size: 30px;
-      margin: 20px auto; }
-
-.descriptionWrapper {
-  position: relative;
-  width: 750px;
-  height: 90px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  font-size: 16px;
-  color: white; }
-  .descriptionWrapper .inside {
-    display: none; }
-  .descriptionWrapper .author {
-    text-align: center;
-    line-height: 30px;
+#desktop {
+  display: block; }
+  @media screen and (max-width: 768px) {
+    #desktop {
+      display: none; } }
+  #desktop .header {
     display: inline-block;
-    width: 100%;
-    font-size: 17px; }
-
-.bottomDescriptionWrapper {
-  width: 750px;
-  height: 20px;
-  text-align: center;
-  margin: 15px auto 0px auto; }
-
-.singleMovie {
-  width: 209px;
-  height: 118px;
-  position: absolute;
-  z-index: 1; }
-
-#room-1 {
-  left: 50px;
-  top: 0px; }
-
-#room-2 {
-  left: 265px;
-  top: 0px; }
-
-#room-3 {
-  left: 483px;
-  top: 0px; }
-
-#room-1-movie-container, #room1 {
-  left: 52px;
-  top: 4px; }
-
-#room-2-movie-container {
-  left: 266px;
-  top: 4px; }
-
-#room-3-movie-container {
-  left: 483px;
-  top: 4px; }
-
-.singleDescription {
-  display: block;
-  width: 209px;
-  height: 90px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
-  text-align: left;
-  position: absolute; }
-
-.divRange {
-  width: 768px;
-  text-align: center;
-  visibility: hidden;
-  margin-left: auto;
-  margin-right: auto; }
-
-.divAnimate {
-  width: 750px;
-  font-size: 23px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: hidden; }
-
-.divLoading {
-  width: 750px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: visible; }
-
-.divTime {
-  width: 140px;
-  margin-top: 0px;
-  display: block;
-  font-size: 31px;
-  float: left;
-  text-align: center; }
-
-.divControl {
-  display: block;
-  width: 57px;
-  height: 56px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.frame {
-  display: block;
-  width: 209px;
-  height: 118px;
-  margin-left: auto;
-  margin-right: auto; }
+    margin-bottom: 30px;
+    clear: both; }
+    #desktop .header img {
+      width: 330px;
+      float: left; }
+    #desktop .header p {
+      color: white;
+      margin: 5px 0 0 20px;
+      font-size: 20px;
+      float: left; }
+  #desktop .divWithBackground {
+    background: url("../img/kino_praha_heatmap.png") no-repeat;
+    width: 750px;
+    height: 454px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto; }
+    #desktop .divWithBackground .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 454px;
+      z-index: 10;
+      text-align: center; }
+      #desktop .divWithBackground .overlay .play {
+        cursor: pointer;
+        opacity: 1;
+        display: block;
+        margin: 80px auto 0px auto;
+        height: 104px; }
+      #desktop .divWithBackground .overlay .txt {
+        display: block;
+        font-size: 30px;
+        margin: 20px auto; }
+  #desktop .descriptionWrapper {
+    position: relative;
+    width: 750px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 16px;
+    color: white; }
+    #desktop .descriptionWrapper .inside {
+      display: none; }
+    #desktop .descriptionWrapper .author {
+      text-align: center;
+      line-height: 30px;
+      display: inline-block;
+      width: 100%;
+      font-size: 17px; }
+  #desktop .bottomDescriptionWrapper {
+    width: 750px;
+    height: 20px;
+    text-align: center;
+    margin: 15px auto 0px auto; }
+  #desktop .singleMovie {
+    width: 209px;
+    height: 118px;
+    position: absolute;
+    z-index: 1; }
+  #desktop #room-1 {
+    left: 50px;
+    top: 0px; }
+  #desktop #room-2 {
+    left: 265px;
+    top: 0px; }
+  #desktop #room-3 {
+    left: 483px;
+    top: 0px; }
+  #desktop #room-1-movie-container, #desktop #room1 {
+    left: 52px;
+    top: 4px; }
+  #desktop #room-2-movie-container {
+    left: 266px;
+    top: 4px; }
+  #desktop #room-3-movie-container {
+    left: 483px;
+    top: 4px; }
+  #desktop .singleDescription {
+    display: block;
+    width: 209px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-align: left;
+    position: absolute; }
+  #desktop .divRange {
+    width: 768px;
+    text-align: center;
+    visibility: hidden;
+    margin-left: auto;
+    margin-right: auto; }
+  #desktop .divAnimate {
+    width: 750px;
+    font-size: 23px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden; }
+  #desktop .divLoading {
+    width: 750px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: visible; }
+  #desktop .divTime {
+    width: 140px;
+    margin-top: 0px;
+    display: block;
+    font-size: 31px;
+    float: left;
+    text-align: center; }
+  #desktop .divControl {
+    display: block;
+    width: 57px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto; }
+  #desktop .frame {
+    display: block;
+    width: 209px;
+    height: 118px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .icon {
   background: url("../img/sprites.png") no-repeat;
@@ -196,12 +208,19 @@ body {
   text-align: center;
   margin-top: 65px;
   font-size: 16px; }
+  @media screen and (max-width: 768px) {
+    .footer {
+      margin-top: 40px; } }
   .footer a {
     text-decoration: none; }
   .footer .info {
     width: 530px;
-    margin: 0 auto;
-    text-align: justify; }
+    text-align: justify;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      .footer .info {
+        width: 80%;
+        text-align: left; } }
   .footer .social {
     display: inline-block;
     text-align: center;

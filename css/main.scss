@@ -13,181 +13,222 @@ body {
   position: relative;
 }
 
-.header {
-  display: inline-block;
-  margin-bottom: 30px;
-  img {
-    width: 330px;
-    float: left;
+#mobile {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
   p {
-    color: white;
-    margin: 5px 0 0 35px;
-    font-size: 20px;
-    float: left;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
   }
-  clear: both;
-}
+  .logo {
+    width: 85%;
+  }
+  .heading {
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .pre-yt {
+    margin-bottom: 20px;
+  }
+  .post-yt {
+    margin-top: 20px;
+  }
+  .yt {
 
-.divWithBackground {
-  background: url('../img/kino_praha_heatmap.png') no-repeat;
-  width: $width;
-  height: 454px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 454px;
-    z-index: 10;
-    text-align: center;
-    .play {
-      cursor: pointer;
-      opacity: 1;
-      display: block;
-      margin: 80px auto 0px auto;
-    }
-    .txt {
-      display: block;
-      font-size: 30px;
-      margin: 20px auto;
-    }
   }
 }
 
-.descriptionWrapper {
-  position: relative;
-  width: $width;
-  height: 90px;
-  margin-left: auto;
-  margin-right: auto;
-
-  text-align: left;
-  font-size: 16px;
-  color:white;
-
-  .inside{
-      display: none;
+#desktop {
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
-  .author {
-    text-align: center;
-    line-height: 30px;
+
+  .header {
     display: inline-block;
-    width: 100%;
-    font-size: 17px;
+    margin-bottom: 30px;
+    img {
+      width: 330px;
+      float: left;
+    }
+    p {
+      color: white;
+      margin: 5px 0 0 20px;
+      font-size: 20px;
+      float: left;
+    }
+    clear: both;
   }
-  .title {
 
+  .divWithBackground {
+    background: url('../img/kino_praha_heatmap.png') no-repeat;
+    width: $width;
+    height: 454px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 454px;
+      z-index: 10;
+      text-align: center;
+      .play {
+        cursor: pointer;
+        opacity: 1;
+        display: block;
+        margin: 80px auto 0px auto;
+        height: 104px;
+      }
+      .txt {
+        display: block;
+        font-size: 30px;
+        margin: 20px auto;
+      }
+    }
   }
-}
 
-.bottomDescriptionWrapper {
-  width: $width;
-  height: 20px;
-  text-align: center;
-  margin: 15px auto 0px auto;
-}
+  .descriptionWrapper {
+    position: relative;
+    width: $width;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
 
-.singleMovie {
-  width: 209px;
-  height: 118px;
-  position: absolute;
-  z-index: 1;
-}
+    text-align: left;
+    font-size: 16px;
+    color: white;
 
-#room-1 {
-  left: 50px;
-  top: 0px;
-}
+    .inside {
+      display: none;
+    }
+    .author {
+      text-align: center;
+      line-height: 30px;
+      display: inline-block;
+      width: 100%;
+      font-size: 17px;
+    }
+    .title {
 
-#room-2 {
-  left: 265px;
-  top: 0px;
-}
+    }
+  }
 
-#room-3 {
-  left: 483px;
-  top: 0px;
-}
+  .bottomDescriptionWrapper {
+    width: $width;
+    height: 20px;
+    text-align: center;
+    margin: 15px auto 0px auto;
+  }
 
-#room-1-movie-container, #room1 {
-  left: 52px;
-  top: 4px;
-}
+  .singleMovie {
+    width: 209px;
+    height: 118px;
+    position: absolute;
+    z-index: 1;
+  }
 
-#room-2-movie-container {
-  left: 266px;
-  top: 4px;
-}
+  #room-1 {
+    left: 50px;
+    top: 0px;
+  }
 
-#room-3-movie-container {
-  left: 483px;
-  top: 4px;
-}
+  #room-2 {
+    left: 265px;
+    top: 0px;
+  }
 
-.singleDescription {
-  display: block;
-  width: 209px;
-  height: 90px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
-  text-align: left;
-  position: absolute;
-}
+  #room-3 {
+    left: 483px;
+    top: 0px;
+  }
 
-.divRange {
-  width: 768px;
-  text-align: center;
-  visibility: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
+  #room-1-movie-container, #room1 {
+    left: 52px;
+    top: 4px;
+  }
 
-.divAnimate {
-  width: $width;
-  font-size: 23px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: hidden;
-}
+  #room-2-movie-container {
+    left: 266px;
+    top: 4px;
+  }
 
-.divLoading {
-  width: $width;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: visible;
-}
+  #room-3-movie-container {
+    left: 483px;
+    top: 4px;
+  }
 
-.divTime {
-  width: 140px;
-  margin-top: 0px;
-  display: block;
-  font-size: 31px;
-  float: left;
-  text-align: center;
-}
+  .singleDescription {
+    display: block;
+    width: 209px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-align: left;
+    position: absolute;
+  }
 
-.divControl {
-  display: block;
-  width: 57px;
-  height: 56px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .divRange {
+    width: 768px;
+    text-align: center;
+    visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.frame {
-  display: block;
-  width: 209px;
-  height: 118px;
-  margin-left: auto;
-  margin-right: auto;
+  .divAnimate {
+    width: $width;
+    font-size: 23px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+  }
+
+  .divLoading {
+    width: $width;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: visible;
+  }
+
+  .divTime {
+    width: 140px;
+    margin-top: 0px;
+    display: block;
+    font-size: 31px;
+    float: left;
+    text-align: center;
+  }
+
+  .divControl {
+    display: block;
+    width: 57px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .frame {
+    display: block;
+    width: 209px;
+    height: 118px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .icon {
@@ -244,14 +285,21 @@ body {
   color: white;
   text-align: center;
   margin-top: 65px;
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+  }
   font-size: 16px;
   a {
     text-decoration: none;
   }
   .info {
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      text-align: left;
+    }
     width: 530px;
-    margin: 0 auto;
     text-align: justify;
+    margin: 0 auto;
 
   }
   .social {

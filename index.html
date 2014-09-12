@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
@@ -10,64 +12,78 @@
 
 <div class="wrapper">
 
-    <div class="header">
-        <img src="img/mce-logo.png" alt="MCE logo"/>
+    <div id="mobile">
+        <img class="logo" src="img/mce-logo.png" alt="MCE logo"/>
 
-        <p>A glowing example of wifi activity visualisation <br/>
-            from the previous edition of MCE conference</p>
+        <p class="heading">A glowing example of wifi activity visualisation from the previous edition of MCE conference</p>
+
+        <p class="pre-yt">You are trying to watch the MCE WiFi heat map on mobile. It isn't possible to bring this full experience to
+            such a small screen, so we have decided to show a video.</p>
+
+        <iframe class="yt" width="320" height="240" src="//www.youtube.com/embed/d27gTrPPAyk?rel=0" frameborder="0"
+                allowfullscreen></iframe>
+        <p class="post-yt">If you want to interact with this map, please open it on a screen at least 768 px wide. Cheers!</p>
     </div>
+    <div id="desktop">
+        <div class="header">
+            <img src="img/mce-logo.png" alt="MCE logo"/>
 
-    <div class="descriptionWrapper">
-        <div class="inside">
-            <div id="room-1" class="singleDescription">
-                <span class="author"></span>
-                <span class="title"></span>
+            <p>A glowing example of wifi activity visualisation <br/>
+                from the previous edition of MCE conference</p>
+        </div>
+
+        <div class="descriptionWrapper">
+            <div class="inside">
+                <div id="room-1" class="singleDescription">
+                    <span class="author"></span>
+                    <span class="title"></span>
+                </div>
+                <div id="room-2" class="singleDescription">
+                    <span class="author"></span>
+                    <span class="title"></span>
+                </div>
+                <div id="room-3" class="singleDescription">
+                    <span class="author"></span>
+                    <span class="title"></span>
+                </div>
             </div>
-            <div id="room-2" class="singleDescription">
-                <span class="author"></span>
-                <span class="title"></span>
+        </div>
+
+
+        <div id="mainDiv" class="divWithBackground">
+            <div class="overlay">
+                <img src="img/play.png" class="play"/>
+                <span class="txt">Click to watch</span>
             </div>
-            <div id="room-3" class="singleDescription">
-                <span class="author"></span>
-                <span class="title"></span>
+            <div class="singleMovie" id="room-1-movie-container">
+                <a href="" id="room-1-movie-href" target="_blank">
+                    <div id="room-1-movie" class="frame"></div>
+                </a>
+            </div>
+
+            <div class="singleMovie" id="room-2-movie-container">
+                <a href="" id="room-2-movie-href" target="_blank">
+                    <div id="room-2-movie" class="frame"></div>
+                </a>
+            </div>
+            <div class="singleMovie" id="room-3-movie-container">
+                <a href="" id="room-3-movie-href" target="_blank">
+                    <div id="room-3-movie" class="frame"></div>
+                </a>
             </div>
         </div>
-    </div>
-
-
-    <div id="mainDiv" class="divWithBackground">
-        <div class="overlay">
-            <img src="img/play.png" class="play"/>
-            <span class="txt">Click to watch</span>
+        <div id="hall" class="bottomDescriptionWrapper">
+            <span class="author"></span>
+            <span class="title"></span>
         </div>
-        <div class="singleMovie" id="room-1-movie-container">
-            <a href="" id="room-1-movie-href" target="_blank">
-                <div id="room-1-movie" class="frame"></div>
-            </a>
-        </div>
+        <div>
 
-        <div class="singleMovie" id="room-2-movie-container">
-            <a href="" id="room-2-movie-href" target="_blank">
-                <div id="room-2-movie" class="frame"></div>
-            </a>
-        </div>
-        <div class="singleMovie" id="room-3-movie-container">
-            <a href="" id="room-3-movie-href" target="_blank">
-                <div id="room-3-movie" class="frame"></div>
-            </a>
-        </div>
-    </div>
-    <div id="hall" class="bottomDescriptionWrapper">
-        <span class="author"></span>
-        <span class="title"></span>
-    </div>
-    <div>
-
-        <div id="rangeDiv" class="divRange">
-            <span class="icon icon-play play-pause" onclick="toggleAnimation()"></span>
+            <div id="rangeDiv" class="divRange">
+                <span class="icon icon-play play-pause" onclick="toggleAnimation()"></span>
                     <span id="timeDiv" class="divTime">
         </span>
-            <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
+                <input id="rangeId" type="range" min="0" max="814" step="1" value="0">
+            </div>
         </div>
     </div>
 

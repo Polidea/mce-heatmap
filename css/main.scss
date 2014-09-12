@@ -141,7 +141,7 @@ body {
 }
 
 .divRange {
-  width: 815px;
+  width: 768px;
   text-align: center;
   visibility: hidden;
   margin-left: auto;
@@ -166,11 +166,11 @@ body {
 }
 
 .divTime {
-  margin-top: 15px;
-  display: inline-block;
-  font-size: 40px;
-  width: 100%;
-  clear: both;
+  width: 140px;
+  margin-top: 4px;
+  display: block;
+  font-size: 29px;
+  float: left;
   text-align: center;
 }
 
@@ -230,8 +230,9 @@ body {
 }
 
 .rangeslider {
-  width: 710px !important;
+  width: 570px !important;
   top: 20px !important;
+  right: 10px !important;
   float: right;
 }
 
@@ -242,7 +243,7 @@ body {
 .footer {
   color: white;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 65px;
   font-size: 16px;
   a {
     text-decoration: none;

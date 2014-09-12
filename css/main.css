@@ -135,9 +135,9 @@ body {
 
 .divTime {
   width: 140px;
-  margin-top: 4px;
+  margin-top: 0px;
   display: block;
-  font-size: 29px;
+  font-size: 31px;
   float: left;
   text-align: center; }
 
@@ -184,8 +184,8 @@ body {
 
 .rangeslider {
   width: 570px !important;
-  top: 20px !important;
-  right: 10px !important;
+  top: 19px !important;
+  right: 9px !important;
   float: right; }
 
 .play-pause {

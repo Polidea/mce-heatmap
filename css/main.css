@@ -69,7 +69,8 @@ body {
         opacity: 1;
         display: block;
         margin: 80px auto 0px auto;
-        height: 104px; }
+        height: 104px;
+        padding-right: 33px; }
       #desktop .divWithBackground .overlay .txt {
         display: block;
         font-size: 30px;

@@ -52,7 +52,7 @@
 
         <div id="mainDiv" class="divWithBackground">
             <div class="overlay">
-                <img src="img/spinner_position.png" class="play"/>
+                <img src="img/play.png" class="play"/>
                 <span class="txt">Click to watch</span>
             </div>
             <div class="singleMovie" id="room-1-movie-container">
@@ -128,7 +128,7 @@
         var movies;
         var schedule;
         $(".play").click(function () {
-            $(".play").attr("src","img/spinner_small.gif");
+            $(".play").attr("src","img/spinner.gif");
             $(".txt").html("Loading...");
             $.when(
                     $.getJSON("data/data_source.json").done(function (data) {
@@ -153,6 +153,9 @@
                     });
         });
     </script>
+</div>
+<div class="preloader">
+    <img src="img/spinner.gif"/>
 </div>
 </body>
 </html>

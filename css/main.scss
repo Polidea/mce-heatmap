@@ -88,8 +88,8 @@ body {
         cursor: pointer;
         opacity: 1;
         display: block;
-        margin: 80px auto 0px auto;
-        height: 104px;
+        margin: 30px auto 0px auto;
+        width: 180px;
         padding-right: 33px;
       }
       .txt {
@@ -337,4 +337,7 @@ body {
       border-color: #e5eb82;
     }
   }
+}
+.preloader{
+  display: none;
 }

@@ -3,6 +3,12 @@ body {
   font-weight: 300;
   margin: 8px; }
 
+a:visited {
+  color: #d3dd2a; }
+
+a:link {
+  color: #d3dd2a; }
+
 .wrapper {
   max-width: 800px;
   margin: 30px auto;

@@ -7,6 +7,14 @@ body {
   margin: 8px;
 }
 
+a:visited {
+  color: $yellow;
+}
+
+a:link {
+  color: $yellow;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 30px auto;
